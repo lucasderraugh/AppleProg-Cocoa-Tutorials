@@ -1,0 +1,310 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D326DDA14E7776D008F7A18 /* Document.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D326DD814E7776D008F7A18 /* Document.xib */; };
+		1DEEE59814CA87190079FA9E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DEEE59714CA87190079FA9E /* Cocoa.framework */; };
+		1DEEE5A214CA87190079FA9E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DEEE5A014CA87190079FA9E /* InfoPlist.strings */; };
+		1DEEE5A414CA87190079FA9E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEEE5A314CA87190079FA9E /* main.m */; };
+		1DEEE5A814CA87190079FA9E /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1DEEE5A614CA87190079FA9E /* Credits.rtf */; };
+		1DEEE5AB14CA87190079FA9E /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEEE5AA14CA87190079FA9E /* Document.m */; };
+		1DEEE5B114CA871A0079FA9E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DEEE5AF14CA871A0079FA9E /* MainMenu.xib */; };
+		1DEEE5BD14CA87430079FA9E /* Document.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 1DEEE5BC14CA87430079FA9E /* Document.xcdatamodel */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D326DD914E7776D008F7A18 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Document.xib; sourceTree = "<group>"; };
+		1DEEE59314CA87190079FA9E /* Lesson 30.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lesson 30.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DEEE59714CA87190079FA9E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		1DEEE59A14CA87190079FA9E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		1DEEE59B14CA87190079FA9E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1DEEE59C14CA87190079FA9E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1DEEE59F14CA87190079FA9E /* Lesson 30-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Lesson 30-Info.plist"; sourceTree = "<group>"; };
+		1DEEE5A114CA87190079FA9E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1DEEE5A314CA87190079FA9E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1DEEE5A514CA87190079FA9E /* Lesson 30-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lesson 30-Prefix.pch"; sourceTree = "<group>"; };
+		1DEEE5A714CA87190079FA9E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		1DEEE5A914CA87190079FA9E /* Document.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Document.h; sourceTree = "<group>"; };
+		1DEEE5AA14CA87190079FA9E /* Document.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Document.m; sourceTree = "<group>"; };
+		1DEEE5B014CA871A0079FA9E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		1DEEE5BC14CA87430079FA9E /* Document.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Document.xcdatamodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1DEEE59014CA87190079FA9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DEEE59814CA87190079FA9E /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1DEEE58814CA87190079FA9E = {
+			isa = PBXGroup;
+			children = (
+				1DEEE59D14CA87190079FA9E /* Lesson 30 */,
+				1DEEE59614CA87190079FA9E /* Frameworks */,
+				1DEEE59414CA87190079FA9E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1DEEE59414CA87190079FA9E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1DEEE59314CA87190079FA9E /* Lesson 30.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1DEEE59614CA87190079FA9E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DEEE59714CA87190079FA9E /* Cocoa.framework */,
+				1DEEE59914CA87190079FA9E /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1DEEE59914CA87190079FA9E /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DEEE59A14CA87190079FA9E /* AppKit.framework */,
+				1DEEE59B14CA87190079FA9E /* CoreData.framework */,
+				1DEEE59C14CA87190079FA9E /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		1DEEE59D14CA87190079FA9E /* Lesson 30 */ = {
+			isa = PBXGroup;
+			children = (
+				1DEEE5A914CA87190079FA9E /* Document.h */,
+				1DEEE5AA14CA87190079FA9E /* Document.m */,
+				1D326DD814E7776D008F7A18 /* Document.xib */,
+				1DEEE5AF14CA871A0079FA9E /* MainMenu.xib */,
+				1DEEE5BC14CA87430079FA9E /* Document.xcdatamodel */,
+				1DEEE59E14CA87190079FA9E /* Supporting Files */,
+			);
+			path = "Lesson 30";
+			sourceTree = "<group>";
+		};
+		1DEEE59E14CA87190079FA9E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1DEEE59F14CA87190079FA9E /* Lesson 30-Info.plist */,
+				1DEEE5A014CA87190079FA9E /* InfoPlist.strings */,
+				1DEEE5A314CA87190079FA9E /* main.m */,
+				1DEEE5A514CA87190079FA9E /* Lesson 30-Prefix.pch */,
+				1DEEE5A614CA87190079FA9E /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1DEEE59214CA87190079FA9E /* Lesson 30 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEEE5B714CA871A0079FA9E /* Build configuration list for PBXNativeTarget "Lesson 30" */;
+			buildPhases = (
+				1DEEE58F14CA87190079FA9E /* Sources */,
+				1DEEE59014CA87190079FA9E /* Frameworks */,
+				1DEEE59114CA87190079FA9E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Lesson 30";
+			productName = "Lesson 30";
+			productReference = 1DEEE59314CA87190079FA9E /* Lesson 30.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1DEEE58A14CA87190079FA9E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 1DEEE58D14CA87190079FA9E /* Build configuration list for PBXProject "Lesson 30" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1DEEE58814CA87190079FA9E;
+			productRefGroup = 1DEEE59414CA87190079FA9E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1DEEE59214CA87190079FA9E /* Lesson 30 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1DEEE59114CA87190079FA9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DEEE5A214CA87190079FA9E /* InfoPlist.strings in Resources */,
+				1DEEE5A814CA87190079FA9E /* Credits.rtf in Resources */,
+				1DEEE5B114CA871A0079FA9E /* MainMenu.xib in Resources */,
+				1D326DDA14E7776D008F7A18 /* Document.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1DEEE58F14CA87190079FA9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DEEE5A414CA87190079FA9E /* main.m in Sources */,
+				1DEEE5AB14CA87190079FA9E /* Document.m in Sources */,
+				1DEEE5BD14CA87430079FA9E /* Document.xcdatamodel in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1D326DD814E7776D008F7A18 /* Document.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D326DD914E7776D008F7A18 /* en */,
+			);
+			name = Document.xib;
+			sourceTree = "<group>";
+		};
+		1DEEE5A014CA87190079FA9E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DEEE5A114CA87190079FA9E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1DEEE5A614CA87190079FA9E /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DEEE5A714CA87190079FA9E /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		1DEEE5AF14CA871A0079FA9E /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DEEE5B014CA871A0079FA9E /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DEEE5B514CA871A0079FA9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1DEEE5B614CA871A0079FA9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1DEEE5B814CA871A0079FA9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Lesson 30/Lesson 30-Prefix.pch";
+				INFOPLIST_FILE = "Lesson 30/Lesson 30-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1DEEE5B914CA871A0079FA9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Lesson 30/Lesson 30-Prefix.pch";
+				INFOPLIST_FILE = "Lesson 30/Lesson 30-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEEE58D14CA87190079FA9E /* Build configuration list for PBXProject "Lesson 30" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEEE5B514CA871A0079FA9E /* Debug */,
+				1DEEE5B614CA871A0079FA9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEEE5B714CA871A0079FA9E /* Build configuration list for PBXNativeTarget "Lesson 30" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEEE5B814CA871A0079FA9E /* Debug */,
+				1DEEE5B914CA871A0079FA9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1DEEE58A14CA87190079FA9E /* Project object */;
+}

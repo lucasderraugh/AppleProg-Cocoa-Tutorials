@@ -1,0 +1,297 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D4CFD96136E69B600EE845F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4CFD95136E69B600EE845F /* Cocoa.framework */; };
+		1D4CFDA0136E69B600EE845F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D4CFD9E136E69B600EE845F /* InfoPlist.strings */; };
+		1D4CFDA3136E69B600EE845F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4CFDA2136E69B600EE845F /* main.m */; };
+		1D4CFDA6136E69B600EE845F /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1D4CFDA4136E69B600EE845F /* Credits.rtf */; };
+		1D4CFDA9136E69B600EE845F /* Lesson_9AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4CFDA8136E69B600EE845F /* Lesson_9AppDelegate.m */; };
+		1D4CFDAC136E69B700EE845F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D4CFDAA136E69B700EE845F /* MainMenu.xib */; };
+		1D4CFDB4136E6A5700EE845F /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4CFDB3136E6A5700EE845F /* AppController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D4CFD91136E69B600EE845F /* Lesson 9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lesson 9.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D4CFD95136E69B600EE845F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		1D4CFD98136E69B600EE845F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		1D4CFD99136E69B600EE845F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1D4CFD9A136E69B600EE845F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D4CFD9D136E69B600EE845F /* Lesson 9-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Lesson 9-Info.plist"; sourceTree = "<group>"; };
+		1D4CFD9F136E69B600EE845F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D4CFDA1136E69B600EE845F /* Lesson 9-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lesson 9-Prefix.pch"; sourceTree = "<group>"; };
+		1D4CFDA2136E69B600EE845F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1D4CFDA5136E69B600EE845F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		1D4CFDA7136E69B600EE845F /* Lesson_9AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lesson_9AppDelegate.h; sourceTree = "<group>"; };
+		1D4CFDA8136E69B600EE845F /* Lesson_9AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lesson_9AppDelegate.m; sourceTree = "<group>"; };
+		1D4CFDAB136E69B700EE845F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		1D4CFDB2136E6A5700EE845F /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = AppController.h; sourceTree = "<group>"; };
+		1D4CFDB3136E6A5700EE845F /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D4CFD8E136E69B600EE845F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D4CFD96136E69B600EE845F /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D4CFD86136E69B600EE845F = {
+			isa = PBXGroup;
+			children = (
+				1D4CFD9B136E69B600EE845F /* Lesson 9 */,
+				1D4CFD94136E69B600EE845F /* Frameworks */,
+				1D4CFD92136E69B600EE845F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1D4CFD92136E69B600EE845F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D4CFD91136E69B600EE845F /* Lesson 9.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1D4CFD94136E69B600EE845F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D4CFD95136E69B600EE845F /* Cocoa.framework */,
+				1D4CFD97136E69B600EE845F /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1D4CFD97136E69B600EE845F /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D4CFD98136E69B600EE845F /* AppKit.framework */,
+				1D4CFD99136E69B600EE845F /* CoreData.framework */,
+				1D4CFD9A136E69B600EE845F /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		1D4CFD9B136E69B600EE845F /* Lesson 9 */ = {
+			isa = PBXGroup;
+			children = (
+				1D4CFDA7136E69B600EE845F /* Lesson_9AppDelegate.h */,
+				1D4CFDA8136E69B600EE845F /* Lesson_9AppDelegate.m */,
+				1D4CFDB2136E6A5700EE845F /* AppController.h */,
+				1D4CFDB3136E6A5700EE845F /* AppController.m */,
+				1D4CFDAA136E69B700EE845F /* MainMenu.xib */,
+				1D4CFD9C136E69B600EE845F /* Supporting Files */,
+			);
+			path = "Lesson 9";
+			sourceTree = "<group>";
+		};
+		1D4CFD9C136E69B600EE845F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1D4CFD9D136E69B600EE845F /* Lesson 9-Info.plist */,
+				1D4CFD9E136E69B600EE845F /* InfoPlist.strings */,
+				1D4CFDA1136E69B600EE845F /* Lesson 9-Prefix.pch */,
+				1D4CFDA2136E69B600EE845F /* main.m */,
+				1D4CFDA4136E69B600EE845F /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D4CFD90136E69B600EE845F /* Lesson 9 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D4CFDAF136E69B700EE845F /* Build configuration list for PBXNativeTarget "Lesson 9" */;
+			buildPhases = (
+				1D4CFD8D136E69B600EE845F /* Sources */,
+				1D4CFD8E136E69B600EE845F /* Frameworks */,
+				1D4CFD8F136E69B600EE845F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Lesson 9";
+			productName = "Lesson 9";
+			productReference = 1D4CFD91136E69B600EE845F /* Lesson 9.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1D4CFD88136E69B600EE845F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 1D4CFD8B136E69B600EE845F /* Build configuration list for PBXProject "Lesson 9" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1D4CFD86136E69B600EE845F;
+			productRefGroup = 1D4CFD92136E69B600EE845F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D4CFD90136E69B600EE845F /* Lesson 9 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D4CFD8F136E69B600EE845F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D4CFDA0136E69B600EE845F /* InfoPlist.strings in Resources */,
+				1D4CFDA6136E69B600EE845F /* Credits.rtf in Resources */,
+				1D4CFDAC136E69B700EE845F /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D4CFD8D136E69B600EE845F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D4CFDA3136E69B600EE845F /* main.m in Sources */,
+				1D4CFDA9136E69B600EE845F /* Lesson_9AppDelegate.m in Sources */,
+				1D4CFDB4136E6A5700EE845F /* AppController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1D4CFD9E136E69B600EE845F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D4CFD9F136E69B600EE845F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1D4CFDA4136E69B600EE845F /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D4CFDA5136E69B600EE845F /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		1D4CFDAA136E69B700EE845F /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D4CFDAB136E69B700EE845F /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D4CFDAD136E69B700EE845F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1D4CFDAE136E69B700EE845F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1D4CFDB0136E69B700EE845F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Lesson 9/Lesson 9-Prefix.pch";
+				INFOPLIST_FILE = "Lesson 9/Lesson 9-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1D4CFDB1136E69B700EE845F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Lesson 9/Lesson 9-Prefix.pch";
+				INFOPLIST_FILE = "Lesson 9/Lesson 9-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D4CFD8B136E69B600EE845F /* Build configuration list for PBXProject "Lesson 9" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D4CFDAD136E69B700EE845F /* Debug */,
+				1D4CFDAE136E69B700EE845F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D4CFDAF136E69B700EE845F /* Build configuration list for PBXNativeTarget "Lesson 9" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D4CFDB0136E69B700EE845F /* Debug */,
+				1D4CFDB1136E69B700EE845F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1D4CFD88136E69B600EE845F /* Project object */;
+}

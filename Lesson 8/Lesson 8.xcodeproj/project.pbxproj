@@ -1,0 +1,297 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DD269D7135A22E200A33F2B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD269D6135A22E200A33F2B /* Cocoa.framework */; };
+		1DD269E1135A22E200A33F2B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DD269DF135A22E200A33F2B /* InfoPlist.strings */; };
+		1DD269E4135A22E200A33F2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD269E3135A22E200A33F2B /* main.m */; };
+		1DD269E7135A22E200A33F2B /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1DD269E5135A22E200A33F2B /* Credits.rtf */; };
+		1DD269EA135A22E200A33F2B /* Lesson_8AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD269E9135A22E200A33F2B /* Lesson_8AppDelegate.m */; };
+		1DD269ED135A22E300A33F2B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DD269EB135A22E300A33F2B /* MainMenu.xib */; };
+		1DD26A24135A260600A33F2B /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD26A23135A260600A33F2B /* AppController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1DD269D2135A22E200A33F2B /* Lesson 8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lesson 8.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DD269D6135A22E200A33F2B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		1DD269D9135A22E200A33F2B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		1DD269DA135A22E200A33F2B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1DD269DB135A22E200A33F2B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1DD269DE135A22E200A33F2B /* Lesson 8-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Lesson 8-Info.plist"; sourceTree = "<group>"; };
+		1DD269E0135A22E200A33F2B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1DD269E2135A22E200A33F2B /* Lesson 8-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lesson 8-Prefix.pch"; sourceTree = "<group>"; };
+		1DD269E3135A22E200A33F2B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1DD269E6135A22E200A33F2B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		1DD269E8135A22E200A33F2B /* Lesson_8AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lesson_8AppDelegate.h; sourceTree = "<group>"; };
+		1DD269E9135A22E200A33F2B /* Lesson_8AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lesson_8AppDelegate.m; sourceTree = "<group>"; };
+		1DD269EC135A22E300A33F2B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		1DD26A22135A260600A33F2B /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = AppController.h; sourceTree = "<group>"; };
+		1DD26A23135A260600A33F2B /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1DD269CF135A22E200A33F2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DD269D7135A22E200A33F2B /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1DD269C7135A22E200A33F2B = {
+			isa = PBXGroup;
+			children = (
+				1DD269DC135A22E200A33F2B /* Lesson 8 */,
+				1DD269D5135A22E200A33F2B /* Frameworks */,
+				1DD269D3135A22E200A33F2B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1DD269D3135A22E200A33F2B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1DD269D2135A22E200A33F2B /* Lesson 8.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1DD269D5135A22E200A33F2B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DD269D6135A22E200A33F2B /* Cocoa.framework */,
+				1DD269D8135A22E200A33F2B /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1DD269D8135A22E200A33F2B /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DD269D9135A22E200A33F2B /* AppKit.framework */,
+				1DD269DA135A22E200A33F2B /* CoreData.framework */,
+				1DD269DB135A22E200A33F2B /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		1DD269DC135A22E200A33F2B /* Lesson 8 */ = {
+			isa = PBXGroup;
+			children = (
+				1DD269E8135A22E200A33F2B /* Lesson_8AppDelegate.h */,
+				1DD269E9135A22E200A33F2B /* Lesson_8AppDelegate.m */,
+				1DD26A22135A260600A33F2B /* AppController.h */,
+				1DD26A23135A260600A33F2B /* AppController.m */,
+				1DD269EB135A22E300A33F2B /* MainMenu.xib */,
+				1DD269DD135A22E200A33F2B /* Supporting Files */,
+			);
+			path = "Lesson 8";
+			sourceTree = "<group>";
+		};
+		1DD269DD135A22E200A33F2B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1DD269DE135A22E200A33F2B /* Lesson 8-Info.plist */,
+				1DD269DF135A22E200A33F2B /* InfoPlist.strings */,
+				1DD269E2135A22E200A33F2B /* Lesson 8-Prefix.pch */,
+				1DD269E3135A22E200A33F2B /* main.m */,
+				1DD269E5135A22E200A33F2B /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1DD269D1135A22E200A33F2B /* Lesson 8 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DD269F0135A22E300A33F2B /* Build configuration list for PBXNativeTarget "Lesson 8" */;
+			buildPhases = (
+				1DD269CE135A22E200A33F2B /* Sources */,
+				1DD269CF135A22E200A33F2B /* Frameworks */,
+				1DD269D0135A22E200A33F2B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Lesson 8";
+			productName = "Lesson 8";
+			productReference = 1DD269D2135A22E200A33F2B /* Lesson 8.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1DD269C9135A22E200A33F2B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 1DD269CC135A22E200A33F2B /* Build configuration list for PBXProject "Lesson 8" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1DD269C7135A22E200A33F2B;
+			productRefGroup = 1DD269D3135A22E200A33F2B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1DD269D1135A22E200A33F2B /* Lesson 8 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1DD269D0135A22E200A33F2B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DD269E1135A22E200A33F2B /* InfoPlist.strings in Resources */,
+				1DD269E7135A22E200A33F2B /* Credits.rtf in Resources */,
+				1DD269ED135A22E300A33F2B /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1DD269CE135A22E200A33F2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DD269E4135A22E200A33F2B /* main.m in Sources */,
+				1DD269EA135A22E200A33F2B /* Lesson_8AppDelegate.m in Sources */,
+				1DD26A24135A260600A33F2B /* AppController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1DD269DF135A22E200A33F2B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DD269E0135A22E200A33F2B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1DD269E5135A22E200A33F2B /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DD269E6135A22E200A33F2B /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		1DD269EB135A22E300A33F2B /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DD269EC135A22E300A33F2B /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DD269EE135A22E300A33F2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1DD269EF135A22E300A33F2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1DD269F1135A22E300A33F2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Lesson 8/Lesson 8-Prefix.pch";
+				INFOPLIST_FILE = "Lesson 8/Lesson 8-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1DD269F2135A22E300A33F2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Lesson 8/Lesson 8-Prefix.pch";
+				INFOPLIST_FILE = "Lesson 8/Lesson 8-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DD269CC135A22E200A33F2B /* Build configuration list for PBXProject "Lesson 8" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DD269EE135A22E300A33F2B /* Debug */,
+				1DD269EF135A22E300A33F2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DD269F0135A22E300A33F2B /* Build configuration list for PBXNativeTarget "Lesson 8" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DD269F1135A22E300A33F2B /* Debug */,
+				1DD269F2135A22E300A33F2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1DD269C9135A22E200A33F2B /* Project object */;
+}
