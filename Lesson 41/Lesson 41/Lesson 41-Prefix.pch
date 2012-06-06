@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Lesson 41' target in the 'Lesson 41' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
