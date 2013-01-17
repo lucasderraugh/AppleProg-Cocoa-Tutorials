@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Lesson 48 - NDB' target in the 'Lesson 48 - NDB' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

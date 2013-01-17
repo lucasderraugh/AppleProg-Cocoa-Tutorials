@@ -14,25 +14,34 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1D14BE8A14381AD200B6E8F5"
-               BuildableName = "Grades.app"
-               BlueprintName = "Grades"
-               ReferencedContainer = "container:Grades.xcodeproj">
+               BlueprintIdentifier = "1DF7796C16A5286E006E6BD7"
+               BuildableName = "Lesson 48 - DB.app"
+               BlueprintName = "Lesson 48 - DB"
+               ReferencedContainer = "container:Lesson 48 - DB.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.GDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "1DF7796C16A5286E006E6BD7"
+            BuildableName = "Lesson 48 - DB.app"
+            BlueprintName = "Lesson 48 - DB"
+            ReferencedContainer = "container:Lesson 48 - DB.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.GDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Debug"
@@ -42,10 +51,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1D14BE8A14381AD200B6E8F5"
-            BuildableName = "Grades.app"
-            BlueprintName = "Grades"
-            ReferencedContainer = "container:Grades.xcodeproj">
+            BlueprintIdentifier = "1DF7796C16A5286E006E6BD7"
+            BuildableName = "Lesson 48 - DB.app"
+            BlueprintName = "Lesson 48 - DB"
+            ReferencedContainer = "container:Lesson 48 - DB.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -60,10 +69,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1D14BE8A14381AD200B6E8F5"
-            BuildableName = "Grades.app"
-            BlueprintName = "Grades"
-            ReferencedContainer = "container:Grades.xcodeproj">
+            BlueprintIdentifier = "1DF7796C16A5286E006E6BD7"
+            BuildableName = "Lesson 48 - DB.app"
+            BlueprintName = "Lesson 48 - DB"
+            ReferencedContainer = "container:Lesson 48 - DB.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
