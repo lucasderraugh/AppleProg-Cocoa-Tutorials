@@ -12,7 +12,7 @@
     NSMutableArray *_tableContents;
 }
 
-- (void)awakeFromNib {
+- (void)applicationDidFinishLaunching:(NSNotification *)notification {
     _tableContents = [[NSMutableArray alloc] init];
     NSString *path = @"/Library/Application Support/Apple/iChat Icons/Flags";
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -25,6 +25,7 @@
                               @"name": [file stringByDeletingPathExtension]};
         [_tableContents addObject:obj];
     }
+    [_tableView reloadData];
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
