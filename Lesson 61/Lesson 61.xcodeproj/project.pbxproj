@@ -1,0 +1,566 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D215A48198DCF27004A4BF3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D215A47198DCF27004A4BF3 /* Cocoa.framework */; };
+		1D215A52198DCF27004A4BF3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D215A50198DCF27004A4BF3 /* InfoPlist.strings */; };
+		1D215A54198DCF27004A4BF3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D215A53198DCF27004A4BF3 /* main.m */; };
+		1D215A58198DCF27004A4BF3 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1D215A56198DCF27004A4BF3 /* Credits.rtf */; };
+		1D215A5B198DCF27004A4BF3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D215A5A198DCF27004A4BF3 /* AppDelegate.m */; };
+		1D215A5E198DCF27004A4BF3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D215A5C198DCF27004A4BF3 /* MainMenu.xib */; };
+		1D215A60198DCF27004A4BF3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D215A5F198DCF27004A4BF3 /* Images.xcassets */; };
+		1D215A67198DCF27004A4BF3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D215A66198DCF27004A4BF3 /* XCTest.framework */; };
+		1D215A68198DCF27004A4BF3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D215A47198DCF27004A4BF3 /* Cocoa.framework */; };
+		1D215A70198DCF27004A4BF3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D215A6E198DCF27004A4BF3 /* InfoPlist.strings */; };
+		1D215A72198DCF27004A4BF3 /* Lesson_61Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D215A71198DCF27004A4BF3 /* Lesson_61Tests.m */; };
+		1D215AC5198DCF88004A4BF3 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D215AC4198DCF88004A4BF3 /* ServiceManagement.framework */; };
+		1D215AC8198DCFEB004A4BF3 /* Lesson 61 Helper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D215AC1198DCF45004A4BF3 /* Lesson 61 Helper.app */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1D215A69198DCF27004A4BF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D215A3C198DCF27004A4BF3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D215A43198DCF27004A4BF3;
+			remoteInfo = "Lesson 61";
+		};
+		1D215AC0198DCF45004A4BF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D215ABB198DCF44004A4BF3 /* Lesson 61 Helper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D215A84198DCF44004A4BF3;
+			remoteInfo = "Lesson 61 Helper";
+		};
+		1D215AC2198DCF45004A4BF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D215ABB198DCF44004A4BF3 /* Lesson 61 Helper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D215AA5198DCF44004A4BF3;
+			remoteInfo = "Lesson 61 HelperTests";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1D215AC7198DCFC3004A4BF3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				1D215AC8198DCFEB004A4BF3 /* Lesson 61 Helper.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1D215A44198DCF27004A4BF3 /* Lesson 61.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lesson 61.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D215A47198DCF27004A4BF3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		1D215A4A198DCF27004A4BF3 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		1D215A4B198DCF27004A4BF3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1D215A4C198DCF27004A4BF3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D215A4F198DCF27004A4BF3 /* Lesson 61-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Lesson 61-Info.plist"; sourceTree = "<group>"; };
+		1D215A51198DCF27004A4BF3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D215A53198DCF27004A4BF3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1D215A55198DCF27004A4BF3 /* Lesson 61-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lesson 61-Prefix.pch"; sourceTree = "<group>"; };
+		1D215A57198DCF27004A4BF3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		1D215A59198DCF27004A4BF3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1D215A5A198DCF27004A4BF3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1D215A5D198DCF27004A4BF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		1D215A5F198DCF27004A4BF3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1D215A65198DCF27004A4BF3 /* Lesson 61Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lesson 61Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D215A66198DCF27004A4BF3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		1D215A6D198DCF27004A4BF3 /* Lesson 61Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Lesson 61Tests-Info.plist"; sourceTree = "<group>"; };
+		1D215A6F198DCF27004A4BF3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D215A71198DCF27004A4BF3 /* Lesson_61Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lesson_61Tests.m; sourceTree = "<group>"; };
+		1D215ABB198DCF44004A4BF3 /* Lesson 61 Helper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Lesson 61 Helper.xcodeproj"; path = "Lesson 61 Helper/Lesson 61 Helper.xcodeproj"; sourceTree = "<group>"; };
+		1D215AC4198DCF88004A4BF3 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		1D215AC6198DCF8F004A4BF3 /* Lesson 61.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Lesson 61.entitlements"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D215A41198DCF27004A4BF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D215AC5198DCF88004A4BF3 /* ServiceManagement.framework in Frameworks */,
+				1D215A48198DCF27004A4BF3 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D215A62198DCF27004A4BF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D215A68198DCF27004A4BF3 /* Cocoa.framework in Frameworks */,
+				1D215A67198DCF27004A4BF3 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D215A3B198DCF27004A4BF3 = {
+			isa = PBXGroup;
+			children = (
+				1D215A4D198DCF27004A4BF3 /* Lesson 61 */,
+				1D215A6B198DCF27004A4BF3 /* Lesson 61Tests */,
+				1D215A46198DCF27004A4BF3 /* Frameworks */,
+				1D215A45198DCF27004A4BF3 /* Products */,
+				1D215ABB198DCF44004A4BF3 /* Lesson 61 Helper.xcodeproj */,
+			);
+			sourceTree = "<group>";
+		};
+		1D215A45198DCF27004A4BF3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D215A44198DCF27004A4BF3 /* Lesson 61.app */,
+				1D215A65198DCF27004A4BF3 /* Lesson 61Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1D215A46198DCF27004A4BF3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D215AC4198DCF88004A4BF3 /* ServiceManagement.framework */,
+				1D215A47198DCF27004A4BF3 /* Cocoa.framework */,
+				1D215A66198DCF27004A4BF3 /* XCTest.framework */,
+				1D215A49198DCF27004A4BF3 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1D215A49198DCF27004A4BF3 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D215A4A198DCF27004A4BF3 /* AppKit.framework */,
+				1D215A4B198DCF27004A4BF3 /* CoreData.framework */,
+				1D215A4C198DCF27004A4BF3 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		1D215A4D198DCF27004A4BF3 /* Lesson 61 */ = {
+			isa = PBXGroup;
+			children = (
+				1D215AC6198DCF8F004A4BF3 /* Lesson 61.entitlements */,
+				1D215A59198DCF27004A4BF3 /* AppDelegate.h */,
+				1D215A5A198DCF27004A4BF3 /* AppDelegate.m */,
+				1D215A5C198DCF27004A4BF3 /* MainMenu.xib */,
+				1D215A5F198DCF27004A4BF3 /* Images.xcassets */,
+				1D215A4E198DCF27004A4BF3 /* Supporting Files */,
+			);
+			path = "Lesson 61";
+			sourceTree = "<group>";
+		};
+		1D215A4E198DCF27004A4BF3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1D215A4F198DCF27004A4BF3 /* Lesson 61-Info.plist */,
+				1D215A50198DCF27004A4BF3 /* InfoPlist.strings */,
+				1D215A53198DCF27004A4BF3 /* main.m */,
+				1D215A55198DCF27004A4BF3 /* Lesson 61-Prefix.pch */,
+				1D215A56198DCF27004A4BF3 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1D215A6B198DCF27004A4BF3 /* Lesson 61Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1D215A71198DCF27004A4BF3 /* Lesson_61Tests.m */,
+				1D215A6C198DCF27004A4BF3 /* Supporting Files */,
+			);
+			path = "Lesson 61Tests";
+			sourceTree = "<group>";
+		};
+		1D215A6C198DCF27004A4BF3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1D215A6D198DCF27004A4BF3 /* Lesson 61Tests-Info.plist */,
+				1D215A6E198DCF27004A4BF3 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1D215ABC198DCF44004A4BF3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D215AC1198DCF45004A4BF3 /* Lesson 61 Helper.app */,
+				1D215AC3198DCF45004A4BF3 /* Lesson 61 HelperTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D215A43198DCF27004A4BF3 /* Lesson 61 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D215A75198DCF27004A4BF3 /* Build configuration list for PBXNativeTarget "Lesson 61" */;
+			buildPhases = (
+				1D215A40198DCF27004A4BF3 /* Sources */,
+				1D215A41198DCF27004A4BF3 /* Frameworks */,
+				1D215A42198DCF27004A4BF3 /* Resources */,
+				1D215AC7198DCFC3004A4BF3 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Lesson 61";
+			productName = "Lesson 61";
+			productReference = 1D215A44198DCF27004A4BF3 /* Lesson 61.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1D215A64198DCF27004A4BF3 /* Lesson 61Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D215A78198DCF27004A4BF3 /* Build configuration list for PBXNativeTarget "Lesson 61Tests" */;
+			buildPhases = (
+				1D215A61198DCF27004A4BF3 /* Sources */,
+				1D215A62198DCF27004A4BF3 /* Frameworks */,
+				1D215A63198DCF27004A4BF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1D215A6A198DCF27004A4BF3 /* PBXTargetDependency */,
+			);
+			name = "Lesson 61Tests";
+			productName = "Lesson 61Tests";
+			productReference = 1D215A65198DCF27004A4BF3 /* Lesson 61Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1D215A3C198DCF27004A4BF3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Lucas Derraugh";
+				TargetAttributes = {
+					1D215A43198DCF27004A4BF3 = {
+						DevelopmentTeam = FP44AY6HHW;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+					1D215A64198DCF27004A4BF3 = {
+						TestTargetID = 1D215A43198DCF27004A4BF3;
+					};
+				};
+			};
+			buildConfigurationList = 1D215A3F198DCF27004A4BF3 /* Build configuration list for PBXProject "Lesson 61" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1D215A3B198DCF27004A4BF3;
+			productRefGroup = 1D215A45198DCF27004A4BF3 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 1D215ABC198DCF44004A4BF3 /* Products */;
+					ProjectRef = 1D215ABB198DCF44004A4BF3 /* Lesson 61 Helper.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				1D215A43198DCF27004A4BF3 /* Lesson 61 */,
+				1D215A64198DCF27004A4BF3 /* Lesson 61Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		1D215AC1198DCF45004A4BF3 /* Lesson 61 Helper.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Lesson 61 Helper.app";
+			remoteRef = 1D215AC0198DCF45004A4BF3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1D215AC3198DCF45004A4BF3 /* Lesson 61 HelperTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Lesson 61 HelperTests.xctest";
+			remoteRef = 1D215AC2198DCF45004A4BF3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D215A42198DCF27004A4BF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D215A52198DCF27004A4BF3 /* InfoPlist.strings in Resources */,
+				1D215A60198DCF27004A4BF3 /* Images.xcassets in Resources */,
+				1D215A58198DCF27004A4BF3 /* Credits.rtf in Resources */,
+				1D215A5E198DCF27004A4BF3 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D215A63198DCF27004A4BF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D215A70198DCF27004A4BF3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D215A40198DCF27004A4BF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D215A5B198DCF27004A4BF3 /* AppDelegate.m in Sources */,
+				1D215A54198DCF27004A4BF3 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D215A61198DCF27004A4BF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D215A72198DCF27004A4BF3 /* Lesson_61Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1D215A6A198DCF27004A4BF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D215A43198DCF27004A4BF3 /* Lesson 61 */;
+			targetProxy = 1D215A69198DCF27004A4BF3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1D215A50198DCF27004A4BF3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D215A51198DCF27004A4BF3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1D215A56198DCF27004A4BF3 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D215A57198DCF27004A4BF3 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		1D215A5C198DCF27004A4BF3 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D215A5D198DCF27004A4BF3 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		1D215A6E198DCF27004A4BF3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D215A6F198DCF27004A4BF3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D215A73198DCF27004A4BF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1D215A74198DCF27004A4BF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1D215A76198DCF27004A4BF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Lesson 61/Lesson 61.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Lesson 61/Lesson 61-Prefix.pch";
+				INFOPLIST_FILE = "Lesson 61/Lesson 61-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1D215A77198DCF27004A4BF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Lesson 61/Lesson 61.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Lesson 61/Lesson 61-Prefix.pch";
+				INFOPLIST_FILE = "Lesson 61/Lesson 61-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		1D215A79198DCF27004A4BF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Lesson 61.app/Contents/MacOS/Lesson 61";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Lesson 61/Lesson 61-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Lesson 61Tests/Lesson 61Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		1D215A7A198DCF27004A4BF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Lesson 61.app/Contents/MacOS/Lesson 61";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Lesson 61/Lesson 61-Prefix.pch";
+				INFOPLIST_FILE = "Lesson 61Tests/Lesson 61Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D215A3F198DCF27004A4BF3 /* Build configuration list for PBXProject "Lesson 61" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D215A73198DCF27004A4BF3 /* Debug */,
+				1D215A74198DCF27004A4BF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D215A75198DCF27004A4BF3 /* Build configuration list for PBXNativeTarget "Lesson 61" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D215A76198DCF27004A4BF3 /* Debug */,
+				1D215A77198DCF27004A4BF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D215A78198DCF27004A4BF3 /* Build configuration list for PBXNativeTarget "Lesson 61Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D215A79198DCF27004A4BF3 /* Debug */,
+				1D215A7A198DCF27004A4BF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1D215A3C198DCF27004A4BF3 /* Project object */;
+}
