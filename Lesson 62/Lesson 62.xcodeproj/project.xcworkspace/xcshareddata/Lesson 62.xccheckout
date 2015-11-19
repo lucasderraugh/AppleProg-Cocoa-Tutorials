@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D0A609EC-2893-4BA3-8833-E51C5353ABD6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Lesson 62</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>127944387CE26DB2EE47FE9C9FD56D8A7FFAFDED</key>
+		<string>https://github.com/lucasd2/AppleProg-Cocoa-Tutorials.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Lesson 62/Lesson 62.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>127944387CE26DB2EE47FE9C9FD56D8A7FFAFDED</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/lucasd2/AppleProg-Cocoa-Tutorials.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>127944387CE26DB2EE47FE9C9FD56D8A7FFAFDED</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>127944387CE26DB2EE47FE9C9FD56D8A7FFAFDED</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AppleProg-Cocoa-Tutorials</string>
+		</dict>
+	</array>
+</dict>
+</plist>
