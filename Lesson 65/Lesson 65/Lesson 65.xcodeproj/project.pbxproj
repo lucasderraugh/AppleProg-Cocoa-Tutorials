@@ -1,0 +1,303 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D6B1BD51BD0D2580092E2F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6B1BD41BD0D2580092E2F9 /* AppDelegate.swift */; };
+		1D6B1BD71BD0D2580092E2F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D6B1BD61BD0D2580092E2F9 /* Assets.xcassets */; };
+		1D6B1BDA1BD0D2580092E2F9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D6B1BD81BD0D2580092E2F9 /* MainMenu.xib */; };
+		1D6B1BED1BD0D41B0092E2F9 /* LoggingFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D6B1BEC1BD0D41B0092E2F9 /* LoggingFramework.framework */; };
+		1D6B1BEE1BD0D41B0092E2F9 /* LoggingFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1D6B1BEC1BD0D41B0092E2F9 /* LoggingFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1D6B1BEF1BD0D41B0092E2F9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1D6B1BEE1BD0D41B0092E2F9 /* LoggingFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1D6B1BD11BD0D2580092E2F9 /* Lesson 65.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lesson 65.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6B1BD41BD0D2580092E2F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1D6B1BD61BD0D2580092E2F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1D6B1BD91BD0D2580092E2F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		1D6B1BDB1BD0D2580092E2F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D6B1BEC1BD0D41B0092E2F9 /* LoggingFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LoggingFramework.framework; path = ../Vendor/LoggingFramework.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D6B1BCE1BD0D2580092E2F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D6B1BED1BD0D41B0092E2F9 /* LoggingFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D6B1BC81BD0D2580092E2F9 = {
+			isa = PBXGroup;
+			children = (
+				1D6B1BD31BD0D2580092E2F9 /* Lesson 65 */,
+				1D6B1BD21BD0D2580092E2F9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1D6B1BD21BD0D2580092E2F9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6B1BD11BD0D2580092E2F9 /* Lesson 65.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1D6B1BD31BD0D2580092E2F9 /* Lesson 65 */ = {
+			isa = PBXGroup;
+			children = (
+				1D6B1BD41BD0D2580092E2F9 /* AppDelegate.swift */,
+				1D6B1BD61BD0D2580092E2F9 /* Assets.xcassets */,
+				1D6B1BD81BD0D2580092E2F9 /* MainMenu.xib */,
+				1D6B1BDB1BD0D2580092E2F9 /* Info.plist */,
+				1D6B1BEC1BD0D41B0092E2F9 /* LoggingFramework.framework */,
+			);
+			path = "Lesson 65";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6B1BD01BD0D2580092E2F9 /* Lesson 65 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6B1BDE1BD0D2580092E2F9 /* Build configuration list for PBXNativeTarget "Lesson 65" */;
+			buildPhases = (
+				1D6B1BCD1BD0D2580092E2F9 /* Sources */,
+				1D6B1BCE1BD0D2580092E2F9 /* Frameworks */,
+				1D6B1BCF1BD0D2580092E2F9 /* Resources */,
+				1D6B1BEF1BD0D41B0092E2F9 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Lesson 65";
+			productName = "Lesson 65";
+			productReference = 1D6B1BD11BD0D2580092E2F9 /* Lesson 65.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1D6B1BC91BD0D2580092E2F9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Lucas Derraugh";
+				TargetAttributes = {
+					1D6B1BD01BD0D2580092E2F9 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 1D6B1BCC1BD0D2580092E2F9 /* Build configuration list for PBXProject "Lesson 65" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1D6B1BC81BD0D2580092E2F9;
+			productRefGroup = 1D6B1BD21BD0D2580092E2F9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6B1BD01BD0D2580092E2F9 /* Lesson 65 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D6B1BCF1BD0D2580092E2F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D6B1BD71BD0D2580092E2F9 /* Assets.xcassets in Resources */,
+				1D6B1BDA1BD0D2580092E2F9 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D6B1BCD1BD0D2580092E2F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D6B1BD51BD0D2580092E2F9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1D6B1BD81BD0D2580092E2F9 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D6B1BD91BD0D2580092E2F9 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D6B1BDC1BD0D2580092E2F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1D6B1BDD1BD0D2580092E2F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1D6B1BDF1BD0D2580092E2F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor",
+				);
+				INFOPLIST_FILE = "Lesson 65/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lucasderraugh.Lesson-65";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1D6B1BE01BD0D2580092E2F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor",
+				);
+				INFOPLIST_FILE = "Lesson 65/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lucasderraugh.Lesson-65";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6B1BCC1BD0D2580092E2F9 /* Build configuration list for PBXProject "Lesson 65" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6B1BDC1BD0D2580092E2F9 /* Debug */,
+				1D6B1BDD1BD0D2580092E2F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D6B1BDE1BD0D2580092E2F9 /* Build configuration list for PBXNativeTarget "Lesson 65" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6B1BDF1BD0D2580092E2F9 /* Debug */,
+				1D6B1BE01BD0D2580092E2F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1D6B1BC91BD0D2580092E2F9 /* Project object */;
+}

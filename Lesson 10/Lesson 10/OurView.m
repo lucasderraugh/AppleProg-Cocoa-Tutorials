@@ -16,11 +16,6 @@
     return self;
 }
 
-- (void)dealloc
-{
-    [imageView release];
-    [super dealloc];
-}
 
 - (void)drawRect:(NSRect)dirtyRect
 {
