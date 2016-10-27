@@ -3,24 +3,23 @@
 //  Lesson 5
 //
 //  Created by Lucas Derraugh on 3/15/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Lucas Derraugh. All rights reserved.
 //
 
 #import "AppController.h"
 
-
 @implementation AppController
 
 - (void)awakeFromNib {
-    [label setFont:[NSFont fontWithName:@"Herculanum" size:15]];
-    [label setTextColor:[NSColor redColor]];
-    [label setBackgroundColor:[NSColor blueColor]];
-    [label setDrawsBackground:YES];
-    [label setSelectable:YES];
+    self.label.font = [NSFont fontWithName:@"Herculanum" size:15];
+    self.label.textColor = NSColor.redColor;
+    self.label.backgroundColor = NSColor.blueColor;
+    self.label.drawsBackground = YES;
+    self.label.selectable = YES;
 }
 
 - (IBAction)sayHello:(id)sender {
-    [label setStringValue:@"Hello Youtube!!!"];
+    self.label.stringValue = @"Hello Youtube!!!";
 }
 
 @end

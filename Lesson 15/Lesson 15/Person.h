@@ -2,13 +2,9 @@
 #import <Foundation/Foundation.h>
 
 
-@interface Person : NSObject {
-@private
-    NSString *name;
-    int age;
-}
+@interface Person : NSObject
 
-@property (copy) NSString *name;
-@property int age;
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic) NSInteger age;
 
 @end

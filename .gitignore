@@ -1,16 +1,12 @@
 # Xcode
 #
-<<<<<<< HEAD
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
 ## Build generated
 build/
-DerivedData
+DerivedData/
 
 ## Various settings
-=======
-build/
->>>>>>> e1860c0cd1eacbb77394b3222053c2162cd85848
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -19,34 +15,23 @@ build/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
-xcuserdata
-<<<<<<< HEAD
+xcuserdata/
+.DS_Store
 
 ## Other
-*.xccheckout
 *.moved-aside
 *.xcuserstate
-*.xcscmblueprint
-*.xcscheme
 
 ## Obj-C/Swift specific
 *.hmap
 *.ipa
-=======
-*.xccheckout
-*.moved-aside
-DerivedData
-*.hmap
-*.ipa
-*.xcuserstate
-.DS_Store
->>>>>>> e1860c0cd1eacbb77394b3222053c2162cd85848
+*.dSYM.zip
+*.dSYM
 
 # CocoaPods
 #
 # We recommend against adding the Pods directory to your .gitignore. However
 # you should judge for yourself, the pros and cons are mentioned at:
-<<<<<<< HEAD
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 #
 # Pods/
@@ -63,12 +48,16 @@ Carthage/Build
 # It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the 
 # screenshots whenever they are needed.
 # For more information about the recommended setup visit:
-# https://github.com/fastlane/fastlane/blob/master/docs/Gitignore.md
+# https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Gitignore.md
 
 fastlane/report.xml
+fastlane/Preview.html
 fastlane/screenshots
-=======
-# http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control
+fastlane/test_output
+
+# Code Injection
 #
-# Pods/
->>>>>>> e1860c0cd1eacbb77394b3222053c2162cd85848
+# After new code Injection tools there's a generated folder /iOSInjectionProject
+# https://github.com/johnno1962/injectionforxcode
+
+iOSInjectionProject/

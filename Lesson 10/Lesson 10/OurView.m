@@ -1,3 +1,11 @@
+//
+//  OurView.m
+//  Lesson 10
+//
+//  Created by Lucas Derraugh on 5/6/11.
+//  Copyright 2011 Lucas Derraugh. All rights reserved.
+//
+
 #import "OurView.h"
 
 
@@ -8,18 +16,12 @@
     self = [super initWithFrame:frame];
     if (self) {
         NSRect rect = NSMakeRect(0, 0, 500, 400);
-        imageView = [[NSImageView alloc] initWithFrame:rect];
-        [imageView setImageScaling:NSScaleToFit];
-        [imageView setImage:[NSImage imageNamed:@"image.jpg"]];
-        [self addSubview:imageView];
+        _imageView = [[NSImageView alloc] initWithFrame:rect];
+        [_imageView setImageScaling:NSScaleToFit];
+        [_imageView setImage:[NSImage imageNamed:@"image.jpg"]];
+        [self addSubview:_imageView];
     }
     return self;
-}
-
-
-- (void)drawRect:(NSRect)dirtyRect
-{
-    // Drawing code here.
 }
 
 @end

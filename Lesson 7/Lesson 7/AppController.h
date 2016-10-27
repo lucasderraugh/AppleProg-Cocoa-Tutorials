@@ -3,18 +3,17 @@
 //  Lesson 7
 //
 //  Created by Lucas Derraugh on 4/6/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Lucas Derraugh. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
 
+@interface AppController : NSObject
 
-@interface AppController : NSObject {
-@private
-    IBOutlet NSTextField *label;
-    IBOutlet NSTextField *nameField;
-    IBOutlet NSDatePicker *dateField;
-}
+@property (nonatomic, weak) IBOutlet NSTextField *label;
+@property (nonatomic, weak) IBOutlet NSTextField *nameField;
+@property (nonatomic, weak) IBOutlet NSDatePicker *dateField;
+
 - (IBAction)showMe:(id)sender;
 
 @end

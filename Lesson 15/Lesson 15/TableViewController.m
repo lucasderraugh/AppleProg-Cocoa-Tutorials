@@ -1,53 +1,45 @@
 #import "TableViewController.h"
 #import "Person.h"
 
+@interface TableViewController ()
+
+@property (nonatomic) NSMutableArray *list;
+
+@end
+
 @implementation TableViewController
 
 - (id)init
 {
-    self = [super init];
-    if (self) {
-        list = [[NSMutableArray alloc] init];
+    if (self = [super init]) {
+        _list = [NSMutableArray array];
     }
-    
     return self;
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    return [list count];
+    return self.list.count;
 }
 
 - (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
-    Person *p = [list objectAtIndex:row];
-    NSString *identifier = [tableColumn identifier];
+    Person *p = self.list[row];
+    NSString *identifier = tableColumn.identifier;
     return [p valueForKey:identifier];
-}
-
-- (void)tableView:(NSTableView *)tableView setObjectValue:(id)object forTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
-    Person *p = [list objectAtIndex:row];
-    NSString *identifier = [tableColumn identifier];
-    [p setValue:object forKey:identifier];
 }
 
 - (IBAction)add:(id)sender {
     Person *person = [[Person alloc] init];
-    [list addObject:person];
-    [tableView reloadData];
-    [person release];
+    [self.list addObject:person];
+    [self.tableView reloadData];
 }
 
 - (IBAction)remove:(id)sender {
-    NSInteger row = [tableView selectedRow];
-    [tableView abortEditing];
-    if (row != -1)
-        [list removeObjectAtIndex:row];
-    [tableView reloadData];
-}
-
-- (void)dealloc
-{
-    [list release];
-    [super dealloc];
+    NSInteger row = self.tableView.selectedRow;
+    [self.tableView abortEditing];
+    if (row != -1) {
+        [self.list removeObjectAtIndex:row];
+    }
+    [self.tableView reloadData];
 }
 
 @end

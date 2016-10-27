@@ -1,38 +1,38 @@
 #import "TableViewController.h"
 #import "Person.h"
 
+
+@interface TableViewController ()
+
+@property (nonatomic) NSMutableArray *list;
+
+@end
+
+
 @implementation TableViewController
 
 - (id)init
 {
-    self = [super init];
-    if (self) {
-        list = [[NSMutableArray alloc] init];
+    if (self = [super init]) {
+        _list = [NSMutableArray array];
     }
     return self;
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    return [list count];
+    return self.list.count;
 }
 
 - (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
-    Person *p = [list objectAtIndex:row];
-    NSString *identifier = [tableColumn identifier];
+    Person *p = self.list[row];
+    NSString *identifier = tableColumn.identifier;
     return [p valueForKey:identifier];
 }
 
 - (IBAction)add:(id)sender {
     Person *person = [[Person alloc] init];
-    [list addObject:person];
-    [tableView reloadData];
-    [person release];
-}
-
-- (void)dealloc
-{
-    [list release];
-    [super dealloc];
+    [self.list addObject:person];
+    [self.tableView reloadData];
 }
 
 @end

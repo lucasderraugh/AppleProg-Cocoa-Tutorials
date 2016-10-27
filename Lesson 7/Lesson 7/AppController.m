@@ -3,7 +3,7 @@
 //  Lesson 7
 //
 //  Created by Lucas Derraugh on 4/6/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Lucas Derraugh. All rights reserved.
 //
 
 #import "AppController.h"
@@ -12,12 +12,12 @@
 @implementation AppController
 
 - (void)awakeFromNib {
-    [dateField setDateValue:[NSDate date]];
+    self.dateField.dateValue = [NSDate date];
 }
 
 - (IBAction)showMe:(id)sender {
-    NSString *str = [NSString stringWithFormat:@"%@ was here at %@", [nameField stringValue], [dateField dateValue]];
-    [label setStringValue:str];
+    NSString *str = [NSString stringWithFormat:@"%@ was here at %@", self.nameField.stringValue, self.dateField.dateValue];
+    self.label.stringValue = str;
 }
 
 @end

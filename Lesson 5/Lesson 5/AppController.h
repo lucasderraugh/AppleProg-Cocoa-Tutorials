@@ -3,16 +3,14 @@
 //  Lesson 5
 //
 //  Created by Lucas Derraugh on 3/15/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Lucas Derraugh. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <Cocoa/Cocoa.h>
 
+@interface AppController : NSObject
 
-@interface AppController : NSObject {
-@private
-    IBOutlet NSTextField *label;
-}
+@property (nonatomic, assign) IBOutlet NSTextField *label;
 
 - (IBAction)sayHello:(id)sender;
 

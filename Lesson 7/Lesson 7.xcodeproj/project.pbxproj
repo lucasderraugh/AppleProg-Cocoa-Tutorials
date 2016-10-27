@@ -9,10 +9,8 @@
 /* Begin PBXBuildFile section */
 		1D2D0C48134C24B30045B9F4 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2D0C47134C24B30045B9F4 /* AppController.m */; };
 		1DF40D9C134C20AE00B10302 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF40D9B134C20AE00B10302 /* Cocoa.framework */; };
-		1DF40DA6134C20AE00B10302 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DF40DA4134C20AE00B10302 /* InfoPlist.strings */; };
 		1DF40DA9134C20AE00B10302 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF40DA8134C20AE00B10302 /* main.m */; };
-		1DF40DAC134C20AE00B10302 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1DF40DAA134C20AE00B10302 /* Credits.rtf */; };
-		1DF40DAF134C20AE00B10302 /* Lesson_7AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF40DAE134C20AE00B10302 /* Lesson_7AppDelegate.m */; };
+		1DF40DAF134C20AE00B10302 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF40DAE134C20AE00B10302 /* AppDelegate.m */; };
 		1DF40DB2134C20AE00B10302 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DF40DB0134C20AE00B10302 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
@@ -24,13 +22,10 @@
 		1DF40D9E134C20AE00B10302 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		1DF40D9F134C20AE00B10302 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		1DF40DA0134C20AE00B10302 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1DF40DA3134C20AE00B10302 /* Lesson 7-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Lesson 7-Info.plist"; sourceTree = "<group>"; };
-		1DF40DA5134C20AE00B10302 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1DF40DA7134C20AE00B10302 /* Lesson 7-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lesson 7-Prefix.pch"; sourceTree = "<group>"; };
+		1DF40DA3134C20AE00B10302 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DF40DA8134C20AE00B10302 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1DF40DAB134C20AE00B10302 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		1DF40DAD134C20AE00B10302 /* Lesson_7AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lesson_7AppDelegate.h; sourceTree = "<group>"; };
-		1DF40DAE134C20AE00B10302 /* Lesson_7AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lesson_7AppDelegate.m; sourceTree = "<group>"; };
+		1DF40DAD134C20AE00B10302 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1DF40DAE134C20AE00B10302 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1DF40DB1134C20AE00B10302 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,11 +80,12 @@
 		1DF40DA1134C20AE00B10302 /* Lesson 7 */ = {
 			isa = PBXGroup;
 			children = (
-				1DF40DAD134C20AE00B10302 /* Lesson_7AppDelegate.h */,
-				1DF40DAE134C20AE00B10302 /* Lesson_7AppDelegate.m */,
+				1DF40DAD134C20AE00B10302 /* AppDelegate.h */,
+				1DF40DAE134C20AE00B10302 /* AppDelegate.m */,
 				1D2D0C46134C24B30045B9F4 /* AppController.h */,
 				1D2D0C47134C24B30045B9F4 /* AppController.m */,
 				1DF40DB0134C20AE00B10302 /* MainMenu.xib */,
+				1DF40DA3134C20AE00B10302 /* Info.plist */,
 				1DF40DA2134C20AE00B10302 /* Supporting Files */,
 			);
 			path = "Lesson 7";
@@ -98,11 +94,7 @@
 		1DF40DA2134C20AE00B10302 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1DF40DA3134C20AE00B10302 /* Lesson 7-Info.plist */,
-				1DF40DA4134C20AE00B10302 /* InfoPlist.strings */,
-				1DF40DA7134C20AE00B10302 /* Lesson 7-Prefix.pch */,
 				1DF40DA8134C20AE00B10302 /* main.m */,
-				1DF40DAA134C20AE00B10302 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -133,7 +125,7 @@
 		1DF40D8E134C20AE00B10302 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0800;
 			};
 			buildConfigurationList = 1DF40D91134C20AE00B10302 /* Build configuration list for PBXProject "Lesson 7" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -157,8 +149,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DF40DA6134C20AE00B10302 /* InfoPlist.strings in Resources */,
-				1DF40DAC134C20AE00B10302 /* Credits.rtf in Resources */,
 				1DF40DB2134C20AE00B10302 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,7 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DF40DA9134C20AE00B10302 /* main.m in Sources */,
-				1DF40DAF134C20AE00B10302 /* Lesson_7AppDelegate.m in Sources */,
+				1DF40DAF134C20AE00B10302 /* AppDelegate.m in Sources */,
 				1D2D0C48134C24B30045B9F4 /* AppController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,22 +169,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1DF40DA4134C20AE00B10302 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1DF40DA5134C20AE00B10302 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		1DF40DAA134C20AE00B10302 /* Credits.rtf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1DF40DAB134C20AE00B10302 /* en */,
-			);
-			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
 		1DF40DB0134C20AE00B10302 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -209,16 +183,31 @@
 		1DF40DB3134C20AE00B10302 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -227,13 +216,27 @@
 		1DF40DB4134C20AE00B10302 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -245,10 +248,9 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_ENABLE_OBJC_GC = required;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Lesson 7/Lesson 7-Prefix.pch";
-				INFOPLIST_FILE = "Lesson 7/Lesson 7-Info.plist";
+				INFOPLIST_FILE = "Lesson 7/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Lucas.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -261,10 +263,9 @@
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_ENABLE_OBJC_GC = required;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Lesson 7/Lesson 7-Prefix.pch";
-				INFOPLIST_FILE = "Lesson 7/Lesson 7-Info.plist";
+				INFOPLIST_FILE = "Lesson 7/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Lucas.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
