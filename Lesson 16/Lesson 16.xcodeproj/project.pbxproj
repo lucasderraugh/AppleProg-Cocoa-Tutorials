@@ -11,7 +11,7 @@
 		1D80729113AD399D00E26C67 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D80728F13AD399D00E26C67 /* InfoPlist.strings */; };
 		1D80729413AD399D00E26C67 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D80729313AD399D00E26C67 /* main.m */; };
 		1D80729713AD399D00E26C67 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1D80729513AD399D00E26C67 /* Credits.rtf */; };
-		1D80729A13AD399D00E26C67 /* Lesson_16AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D80729913AD399D00E26C67 /* Lesson_16AppDelegate.m */; };
+		1D80729A13AD399D00E26C67 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D80729913AD399D00E26C67 /* AppDelegate.m */; };
 		1D80729D13AD399D00E26C67 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D80729B13AD399D00E26C67 /* MainMenu.xib */; };
 		1D8DFB9013AD636300378587 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DFB8F13AD636300378587 /* AppController.m */; };
 /* End PBXBuildFile section */
@@ -27,8 +27,8 @@
 		1D80729213AD399D00E26C67 /* Lesson 16-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lesson 16-Prefix.pch"; sourceTree = "<group>"; };
 		1D80729313AD399D00E26C67 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1D80729613AD399D00E26C67 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		1D80729813AD399D00E26C67 /* Lesson_16AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lesson_16AppDelegate.h; sourceTree = "<group>"; };
-		1D80729913AD399D00E26C67 /* Lesson_16AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lesson_16AppDelegate.m; sourceTree = "<group>"; };
+		1D80729813AD399D00E26C67 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1D80729913AD399D00E26C67 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1D80729C13AD399D00E26C67 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		1D8DFB8E13AD636300378587 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		1D8DFB8F13AD636300378587 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
@@ -85,8 +85,8 @@
 		1D80728C13AD399D00E26C67 /* Lesson 16 */ = {
 			isa = PBXGroup;
 			children = (
-				1D80729813AD399D00E26C67 /* Lesson_16AppDelegate.h */,
-				1D80729913AD399D00E26C67 /* Lesson_16AppDelegate.m */,
+				1D80729813AD399D00E26C67 /* AppDelegate.h */,
+				1D80729913AD399D00E26C67 /* AppDelegate.m */,
 				1D80729B13AD399D00E26C67 /* MainMenu.xib */,
 				1D8DFB8E13AD636300378587 /* AppController.h */,
 				1D8DFB8F13AD636300378587 /* AppController.m */,
@@ -133,7 +133,7 @@
 		1D80727913AD399D00E26C67 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0810;
 			};
 			buildConfigurationList = 1D80727C13AD399D00E26C67 /* Build configuration list for PBXProject "Lesson 16" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -171,7 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D80729413AD399D00E26C67 /* main.m in Sources */,
-				1D80729A13AD399D00E26C67 /* Lesson_16AppDelegate.m in Sources */,
+				1D80729A13AD399D00E26C67 /* AppDelegate.m in Sources */,
 				1D8DFB9013AD636300378587 /* AppController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,16 +209,31 @@
 		1D80729E13AD399D00E26C67 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -227,13 +242,27 @@
 		1D80729F13AD399D00E26C67 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -248,6 +277,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Lesson 16/Lesson 16-Prefix.pch";
 				INFOPLIST_FILE = "Lesson 16/Lesson 16-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Lucas.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -263,6 +293,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Lesson 16/Lesson 16-Prefix.pch";
 				INFOPLIST_FILE = "Lesson 16/Lesson 16-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Lucas.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

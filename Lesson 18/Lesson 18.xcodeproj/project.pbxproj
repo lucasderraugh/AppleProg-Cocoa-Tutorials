@@ -14,7 +14,7 @@
 		1DAA989213E1BE260040BCB7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DAA989013E1BE260040BCB7 /* InfoPlist.strings */; };
 		1DAA989513E1BE260040BCB7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAA989413E1BE260040BCB7 /* main.m */; };
 		1DAA989813E1BE260040BCB7 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1DAA989613E1BE260040BCB7 /* Credits.rtf */; };
-		1DAA989B13E1BE260040BCB7 /* Lesson_18AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAA989A13E1BE260040BCB7 /* Lesson_18AppDelegate.m */; };
+		1DAA989B13E1BE260040BCB7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAA989A13E1BE260040BCB7 /* AppDelegate.m */; };
 		1DAA989E13E1BE260040BCB7 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DAA989C13E1BE260040BCB7 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
@@ -34,8 +34,8 @@
 		1DAA989313E1BE260040BCB7 /* Lesson 18-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lesson 18-Prefix.pch"; sourceTree = "<group>"; };
 		1DAA989413E1BE260040BCB7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1DAA989713E1BE260040BCB7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		1DAA989913E1BE260040BCB7 /* Lesson_18AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lesson_18AppDelegate.h; sourceTree = "<group>"; };
-		1DAA989A13E1BE260040BCB7 /* Lesson_18AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lesson_18AppDelegate.m; sourceTree = "<group>"; };
+		1DAA989913E1BE260040BCB7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1DAA989A13E1BE260040BCB7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1DAA989D13E1BE260040BCB7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,8 +90,8 @@
 		1DAA988D13E1BE260040BCB7 /* Lesson 18 */ = {
 			isa = PBXGroup;
 			children = (
-				1DAA989913E1BE260040BCB7 /* Lesson_18AppDelegate.h */,
-				1DAA989A13E1BE260040BCB7 /* Lesson_18AppDelegate.m */,
+				1DAA989913E1BE260040BCB7 /* AppDelegate.h */,
+				1DAA989A13E1BE260040BCB7 /* AppDelegate.m */,
 				1DA9465D13E8B56A0089C368 /* AppController.h */,
 				1DA9465E13E8B56A0089C368 /* AppController.m */,
 				1DAA989C13E1BE260040BCB7 /* MainMenu.xib */,
@@ -141,7 +141,7 @@
 		1DAA987A13E1BE260040BCB7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0810;
 			};
 			buildConfigurationList = 1DAA987D13E1BE260040BCB7 /* Build configuration list for PBXProject "Lesson 18" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -180,7 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DAA989513E1BE260040BCB7 /* main.m in Sources */,
-				1DAA989B13E1BE260040BCB7 /* Lesson_18AppDelegate.m in Sources */,
+				1DAA989B13E1BE260040BCB7 /* AppDelegate.m in Sources */,
 				1DA9465F13E8B56A0089C368 /* AppController.m in Sources */,
 				1D79703B13E9B73D0006AEEA /* DownloadsController.m in Sources */,
 			);
@@ -219,16 +219,30 @@
 		1DAA989F13E1BE260040BCB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -237,13 +251,26 @@
 		1DAA98A013E1BE260040BCB7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -252,12 +279,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Lesson 18/Lesson 18-Prefix.pch";
 				INFOPLIST_FILE = "Lesson 18/Lesson 18-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Lucas.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -267,12 +296,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Lesson 18/Lesson 18-Prefix.pch";
 				INFOPLIST_FILE = "Lesson 18/Lesson 18-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Lucas.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

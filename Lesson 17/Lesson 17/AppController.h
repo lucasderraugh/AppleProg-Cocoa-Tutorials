@@ -3,17 +3,16 @@
 //  Lesson 17
 //
 //  Created by Lucas Derraugh on 7/9/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Lucas Derraugh. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
 
-@interface AppController : NSObject {
-@private
-    IBOutlet NSTextField *label;
-}
+@interface AppController : NSObject
 
-- (IBAction)toolbarAction:(id)sender;
+@property (weak) NSTextField *label;
+
+- (IBAction)toolbarAction:(NSToolbarItem *)sender;
 
 @end

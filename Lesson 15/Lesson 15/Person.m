@@ -4,8 +4,7 @@
 
 @implementation Person
 
-- (id)init
-{
+- (instancetype)init {
     if (self = [super init]) {
         _name = @"Yoda";
         _age = 300;

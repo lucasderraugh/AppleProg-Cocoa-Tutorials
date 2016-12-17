@@ -3,34 +3,26 @@
 //  Lesson 18
 //
 //  Created by Lucas Derraugh on 8/2/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Lucas Derraugh. All rights reserved.
 //
 
 #import "AppController.h"
 #import "DownloadsController.h"
 
+@interface AppController ()
+
+@property DownloadsController *downloadsController;
+
+@end
+
+
 @implementation AppController
 
-- (id)init
-{
-    self = [super init];
-    if (self) {
-        // Initialization code here.
-    }
-    
-    return self;
-}
-
 - (IBAction)showDownloads:(id)sender {
-    if (!downloadsController) {
-        downloadsController = [[DownloadsController alloc] initWithWindowNibName:@"Downloads"];
+    if (!_downloadsController) {
+        _downloadsController = [[DownloadsController alloc] initWithWindowNibName:@"Downloads"];
     }
-    [downloadsController showWindow:self];
-}
-
-- (void)dealloc
-{
-    [super dealloc];
+    [_downloadsController showWindow:self];
 }
 
 @end

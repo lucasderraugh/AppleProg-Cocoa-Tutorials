@@ -3,7 +3,7 @@
 //  Grades
 //
 //  Created by Lucas Derraugh on 10/2/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Lucas Derraugh. All rights reserved.
 //
 
 #import "MyDocument.h"
@@ -12,9 +12,8 @@
 
 @synthesize assignments;
 
-- (id)init {
-    self = [super init];
-    if (self) {
+- (instancetype)init {
+    if (self = [super init]) {
         assignments = [[NSMutableArray alloc] init];
     }
     return self;
@@ -56,11 +55,6 @@
 
 + (BOOL)autosavesInPlace {
     return YES;
-}
-
-- (void)dealloc {
-    [assignments release];
-    [super dealloc];
 }
 
 @end

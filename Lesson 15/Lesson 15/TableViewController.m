@@ -9,8 +9,7 @@
 
 @implementation TableViewController
 
-- (id)init
-{
+- (instancetype)init {
     if (self = [super init]) {
         _list = [NSMutableArray array];
     }

@@ -1,16 +1,14 @@
 //
-//  Lesson_17AppDelegate.m
+//  AppDelegate.m
 //  Lesson 17
 //
 //  Created by Lucas Derraugh on 7/8/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Lucas Derraugh. All rights reserved.
 //
 
-#import "Lesson_17AppDelegate.h"
+#import "AppDelegate.h"
 
-@implementation Lesson_17AppDelegate
-
-@synthesize window;
+@implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {

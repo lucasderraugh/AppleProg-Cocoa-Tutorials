@@ -1,5 +1,5 @@
 //
-//  main.m
+//  AppDelegate.h
 //  Lesson 18
 //
 //  Created by Lucas Derraugh on 7/28/11.
@@ -8,7 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
-int main(int argc, char *argv[])
-{
-    return NSApplicationMain(argc, (const char **)argv);
-}
+@interface AppDelegate : NSObject <NSApplicationDelegate>
+
+@property (weak) IBOutlet NSWindow *window;
+
+@end
