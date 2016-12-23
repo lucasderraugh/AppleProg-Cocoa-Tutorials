@@ -11,7 +11,7 @@
 @implementation QuickLookTableView
 
 - (void)keyDown:(NSEvent *)theEvent {
-    NSString *characters = [theEvent characters];
+    NSString *characters = theEvent.characters;
     if ([characters isEqualToString:@" "]) {
         [self.qlDelegate didPressSpacebarForTableView:self];
     } else {

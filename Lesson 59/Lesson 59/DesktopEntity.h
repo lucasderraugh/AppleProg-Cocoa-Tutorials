@@ -14,6 +14,6 @@
 @property (copy, readonly) NSString *name;
 @property (strong, nonatomic) NSImage *image;
 
-- (id)initWithFileURL:(NSURL *)fileURL;
+- (instancetype)initWithFileURL:(NSURL *)fileURL;
 
 @end

@@ -3,10 +3,12 @@
 //  Lesson 33
 //
 //  Created by Lucas Derraugh on 3/7/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Lucas Derraugh. All rights reserved.
 //
 
 #import "AppController.h"
+
+#import "AppDelegate.h"
 
 @implementation AppController
 
@@ -15,7 +17,7 @@
                       @"OK",
                       @"Cancel", 
                       @"Other Button", 
-                      [[NSApp delegate] window],
+                      [(AppDelegate *)[NSApp delegate] window],
                       self,
                       @selector(sheetDidEnd:resultCode:contextInfo:), 
                       NULL,

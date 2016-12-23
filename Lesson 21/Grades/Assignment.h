@@ -3,18 +3,14 @@
 //  Grades
 //
 //  Created by Lucas Derraugh on 10/2/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Lucas Derraugh. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface Assignment : NSObject {
-@private
-    NSString *name;
-    int grade;
-}
+@interface Assignment : NSObject
 
 @property (copy) NSString *name;
-@property int grade;
+@property NSInteger grade;
 
 @end

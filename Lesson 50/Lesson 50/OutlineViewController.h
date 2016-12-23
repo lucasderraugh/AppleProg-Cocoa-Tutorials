@@ -8,10 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+@class Person;
+
 @interface OutlineViewController : NSObject <NSOutlineViewDataSource>
 
 @property (weak) IBOutlet NSOutlineView *outlineView;
-@property (copy) NSMutableArray *people;
+@property (copy) NSMutableArray<Person *> *people;
 
 - (IBAction)add:(id)sender;
 - (IBAction)remove:(id)sender;

@@ -10,10 +10,8 @@
 
 @implementation Person
 
-- (id)init
-{
-    self = [super init];
-    if (self) {
+- (instancetype)init {
+    if (self = [super init]) {
         _name = @"Bob";
         _age = 40;
     }

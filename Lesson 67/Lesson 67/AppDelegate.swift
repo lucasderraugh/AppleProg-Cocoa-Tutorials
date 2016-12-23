@@ -15,11 +15,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let initialVC = InitialViewController()
 
 
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
         window.contentViewController = initialVC
     }
 
-    func applicationWillTerminate(aNotification: NSNotification) {
+    func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
 

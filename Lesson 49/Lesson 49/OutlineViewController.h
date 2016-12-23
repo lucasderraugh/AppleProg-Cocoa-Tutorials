@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+@class Person;
+
 @interface OutlineViewController : NSObject <NSOutlineViewDataSource>
 
-@property (copy) NSMutableArray *people;
+@property (copy) NSMutableArray<Person *> *people;
 
 @end

@@ -11,7 +11,7 @@ import Cocoa
 class ColorView: NSView {
 	
 	override class func initialize () {
-		let t = UnsafeMutablePointer<time_t>.alloc(time_t(0))
+		let t = UnsafeMutablePointer<time_t>.allocate(capacity: time_t(0))
 		srand48(time(t))
 	}
 
@@ -24,7 +24,7 @@ class ColorView: NSView {
 		let r = CGFloat(drand48())
 		let g = CGFloat(drand48())
 		let b = CGFloat(drand48())
-		layer?.backgroundColor = NSColor(red: r, green: g, blue: b, alpha: 1).CGColor
+		layer?.backgroundColor = NSColor(red: r, green: g, blue: b, alpha: 1).cgColor
 	}
 
 	required init?(coder: NSCoder) {

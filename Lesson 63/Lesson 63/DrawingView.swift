@@ -10,14 +10,12 @@ import Cocoa
 
 class DrawingView: NSView {
     
-    override func mouseDown(theEvent: NSEvent) {
-        let point = convertPoint(theEvent.locationInWindow, fromView: nil)
-        if theEvent.modifierFlags & .AlternateKeyMask == .AlternateKeyMask {
-            if let view = hitTest(point) {
-                if view is CircleView {
-                    removeCircle(view)
-                    undoManager?.setActionName("Remove Circle")
-                }
+    override func mouseDown(with theEvent: NSEvent) {
+        let point = convert(theEvent.locationInWindow, from: nil)
+        if theEvent.modifierFlags.contains(.option) {
+            if let view = hitTest(point), view is CircleView {
+                removeCircle(view)
+                undoManager?.setActionName("Remove Circle")
             }
         } else {
             let circle = CircleView(frame: NSMakeRect(point.x-15, point.y-15, 30, 30))
@@ -26,14 +24,14 @@ class DrawingView: NSView {
         }
     }
     
-    func addCircle(circle: NSView) {
+    func addCircle(_ circle: NSView) {
         addSubview(circle)
-        undoManager?.registerUndoWithTarget(self, selector: "removeCircle:", object: circle)
+        undoManager?.registerUndo(withTarget: self, selector: #selector(removeCircle(_:)), object: circle)
     }
     
-    func removeCircle(circle: NSView) {
+    func removeCircle(_ circle: NSView) {
         circle.removeFromSuperview()
-        undoManager?.prepareWithInvocationTarget(self).addCircle(circle)
+        (undoManager?.prepare(withInvocationTarget: self) as AnyObject).addCircle(circle)
     }
 
     override var wantsUpdateLayer: Bool {
@@ -41,7 +39,7 @@ class DrawingView: NSView {
     }
     
     override func updateLayer() {
-        layer?.backgroundColor = NSColor.blackColor().CGColor
+        layer?.backgroundColor = NSColor.black.cgColor
     }
     
 }

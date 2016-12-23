@@ -9,17 +9,24 @@
 #import "AppDelegate.h"
 #import "DesktopEntity.h"
 
-@implementation AppDelegate {
-    NSMutableArray *_tableContents;
-    NSRange _objectRange;
-    NSArray *_currentlyDraggedObjects;
-}
+@interface AppDelegate ()
+
+@property NSMutableArray *tableContents;
+@property NSRange objectRange;
+@property NSArray *currentlyDraggedObjects;
+
+@end
+
+@implementation AppDelegate
+
+NSString *const kGroupCellIdentifier = @"GroupCell";
+NSString *const kImageCellIdentifier = @"ImageCell";
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification {
     _tableContents = [[NSMutableArray alloc] init];
     NSString *path = @"/Library/Application Support/Apple/iChat Icons/";
-    NSURL *url = [[NSURL alloc] initFileURLWithPath:path];
-    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSURL *url = [NSURL fileURLWithPath:path];
+    NSFileManager *fileManager = NSFileManager.defaultManager;
     NSDirectoryEnumerator *directoryEnum = [fileManager enumeratorAtURL:url
                                              includingPropertiesForKeys:nil
                                                                 options:0
@@ -29,22 +36,23 @@
     
     for (NSURL *fileURL in directoryEnum) {
         DesktopEntity *entity = [DesktopEntity entityForURL:fileURL];
-        if ([entity isKindOfClass:[DesktopEntity class]])
-            [_tableContents addObject:entity];
+        if ([entity isKindOfClass:[DesktopEntity class]]) {
+            [self.tableContents addObject:entity];
+        }
     }
-    [_tableView reloadData];
-    [_tableView registerForDraggedTypes:@[(id)kUTTypeFileURL]];
-    [_tableView setDraggingSourceOperationMask:NSDragOperationEvery forLocal:NO];
+    [self.tableView reloadData];
+    [self.tableView registerForDraggedTypes:@[(id)kUTTypeFileURL]];
+    [self.tableView setDraggingSourceOperationMask:NSDragOperationEvery forLocal:NO];
 }
 
 #pragma mark NSTableView datasource
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    return [_tableContents count];
+    return self.tableContents.count;
 }
 
 - (id<NSPasteboardWriting>)tableView:(NSTableView *)tableView pasteboardWriterForRow:(NSInteger)row {
-    return _tableContents[row];
+    return self.tableContents[row];
 }
 
 - (NSDictionary *)pasteboardReadingOptions {
@@ -58,18 +66,19 @@
 }
 
 - (void)tableView:(NSTableView *)tableView draggingSession:(NSDraggingSession *)session willBeginAtPoint:(NSPoint)screenPoint forRowIndexes:(NSIndexSet *)rowIndexes {
-    NSUInteger len = ([rowIndexes lastIndex]+1) - [rowIndexes firstIndex];
-    _objectRange = NSMakeRange([rowIndexes firstIndex], len);
-    _currentlyDraggedObjects = [_tableContents objectsAtIndexes:rowIndexes];
+    NSUInteger len = (rowIndexes.lastIndex+1) - rowIndexes.firstIndex;
+    self.objectRange = NSMakeRange(rowIndexes.firstIndex, len);
+    self.currentlyDraggedObjects = [self.tableContents objectsAtIndexes:rowIndexes];
 }
 
 - (void)tableView:(NSTableView *)tableView draggingSession:(NSDraggingSession *)session endedAtPoint:(NSPoint)screenPoint operation:(NSDragOperation)operation {
-    _objectRange = NSMakeRange(0, 0);
-    _currentlyDraggedObjects = nil;
+    self.objectRange = NSMakeRange(0, 0);
+    self.currentlyDraggedObjects = nil;
 }
 
 - (NSDragOperation)tableView:(NSTableView *)tableView validateDrop:(id<NSDraggingInfo>)info proposedRow:(NSInteger)row proposedDropOperation:(NSTableViewDropOperation)dropOperation {
-    if (dropOperation == NSTableViewDropAbove && (_objectRange.location > row || _objectRange.location+_objectRange.length < row)) {
+    NSRange range = self.objectRange;
+    if (dropOperation == NSTableViewDropAbove && (range.location > row || range.location+range.length < row)) {
         if ([info draggingSource] == tableView) {
             if ([info draggingSourceOperationMask] == NSDragOperationCopy) {
                 info.animatesToDestination = YES;
@@ -89,18 +98,19 @@
 
 - (void)tableView:(NSTableView *)tableView updateDraggingItemsForDrag:(id<NSDraggingInfo>)draggingInfo {
     if ([draggingInfo draggingSource] != tableView) {
-        NSArray *classes = @[[DesktopEntity class], [NSPasteboardItem class]];
-        NSTableCellView *tableCellView = [tableView makeViewWithIdentifier:@"ImageCell" owner:self];
+        NSArray<Class> *classes = @[[DesktopEntity class], [NSPasteboardItem class]];
+        NSTableCellView *tableCellView = [tableView makeViewWithIdentifier:kImageCellIdentifier owner:self];
         __block NSInteger validCount = 0;
-        [draggingInfo enumerateDraggingItemsWithOptions:0 forView:tableView classes:classes searchOptions:nil usingBlock:^(NSDraggingItem *draggingItem, NSInteger idx, BOOL *stop) {
+        [draggingInfo enumerateDraggingItemsWithOptions:0 forView:tableView classes:classes searchOptions:@{} usingBlock:^(NSDraggingItem *draggingItem, NSInteger idx, BOOL *stop) {
             if ([draggingItem.item isKindOfClass:[DesktopEntity class]]) {
                 DesktopEntity *entity = (DesktopEntity *)draggingItem.item;
-                draggingItem.draggingFrame = [tableCellView frame];
+                draggingItem.draggingFrame = tableCellView.frame;
                 draggingItem.imageComponentsProvider = ^NSArray *{
-                    if ([entity isKindOfClass:[DesktopImageEntity class]])
-                        [tableCellView.imageView setImage:[(DesktopImageEntity *)entity image]];
-                    [tableCellView.textField setStringValue:entity.name];
-                    return [tableCellView draggingImageComponents];
+                    if ([entity isKindOfClass:[DesktopImageEntity class]]) {
+                        tableCellView.imageView.image = [(DesktopImageEntity *)entity image];
+                    }
+                    tableCellView.textField.stringValue = entity.name;
+                    return tableCellView.draggingImageComponents;
                 };
                 validCount++;
             } else {
@@ -113,7 +123,7 @@
 }
 
 - (BOOL)tableView:(NSTableView *)tableView acceptDrop:(id<NSDraggingInfo>)info row:(NSInteger)row dropOperation:(NSTableViewDropOperation)dropOperation {
-    if (_currentlyDraggedObjects == nil || [info draggingSourceOperationMask] == NSDragOperationCopy) {
+    if (self.currentlyDraggedObjects == nil || [info draggingSourceOperationMask] == NSDragOperationCopy) {
         [self performInsertWithDragInfo:info row:row];
     } else {
         [tableView beginUpdates];
@@ -124,28 +134,28 @@
 }
 
 - (void)performDragReorderWithDragInfo:(id<NSDraggingInfo>)info row:(NSInteger)row {
-    NSArray *classes = @[[DesktopEntity class]];
-    [info enumerateDraggingItemsWithOptions:0 forView:_tableView classes:classes searchOptions:nil usingBlock:^(NSDraggingItem *draggingItem, NSInteger idx, BOOL *stop) {
+    NSArray<Class> *classes = @[[DesktopEntity class]];
+    [info enumerateDraggingItemsWithOptions:0 forView:self.tableView classes:classes searchOptions:@{} usingBlock:^(NSDraggingItem *draggingItem, NSInteger idx, BOOL *stop) {
         NSInteger newIndex = row+idx;
-        DesktopEntity *entity = _currentlyDraggedObjects[idx];
-        NSInteger oldIndex = [_tableContents indexOfObject:entity];
+        DesktopEntity *entity = self.currentlyDraggedObjects[idx];
+        NSInteger oldIndex = [self.tableContents indexOfObject:entity];
         if (oldIndex < newIndex) {
             newIndex -= (idx+1);
         }
-        [_tableContents removeObjectAtIndex:oldIndex];
-        [_tableContents insertObject:entity atIndex:newIndex];
-        [_tableView moveRowAtIndex:oldIndex toIndex:newIndex];
+        [self.tableContents removeObjectAtIndex:oldIndex];
+        self.tableContents[newIndex] = entity;
+        [self.tableView moveRowAtIndex:oldIndex toIndex:newIndex];
     }];
 }
 
 - (void)performInsertWithDragInfo:(id<NSDraggingInfo>)info row:(NSInteger)row {
-    NSArray *classes = @[[DesktopEntity class]];
+    NSArray<Class> *classes = @[[DesktopEntity class]];
     __block NSInteger insertionIndex = row;
-    [info enumerateDraggingItemsWithOptions:0 forView:_tableView classes:classes searchOptions:nil usingBlock:^(NSDraggingItem *draggingItem, NSInteger idx, BOOL *stop) {
+    [info enumerateDraggingItemsWithOptions:0 forView:self.tableView classes:classes searchOptions:@{} usingBlock:^(NSDraggingItem *draggingItem, NSInteger idx, BOOL *stop) {
         DesktopEntity *entity = draggingItem.item;
-        [_tableContents insertObject:entity atIndex:insertionIndex];
-        [_tableView insertRowsAtIndexes:[NSIndexSet indexSetWithIndex:insertionIndex] withAnimation:NSTableViewAnimationEffectGap];
-        draggingItem.draggingFrame = [_tableView frameOfCellAtColumn:0 row:insertionIndex];
+        self.tableContents[insertionIndex] = entity;
+        [self.tableView insertRowsAtIndexes:[NSIndexSet indexSetWithIndex:insertionIndex] withAnimation:NSTableViewAnimationEffectGap];
+        draggingItem.draggingFrame = [self.tableView frameOfCellAtColumn:0 row:insertionIndex];
         insertionIndex++;
     }];
 }
@@ -153,70 +163,64 @@
 #pragma mark NSTableView delegate
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
-    DesktopEntity *entity = _tableContents[row];
+    DesktopEntity *entity = self.tableContents[row];
     if ([entity isKindOfClass:[DesktopFolderEntity class]]) {
-        NSTextField *groupCell = [tableView makeViewWithIdentifier:@"GroupCell" owner:self];
-        [groupCell setStringValue:entity.name];
+        NSTextField *groupCell = [tableView makeViewWithIdentifier:kGroupCellIdentifier owner:self];
+        groupCell.stringValue = entity.name;
         return groupCell;
     } if ([entity isKindOfClass:[DesktopImageEntity class]]) {
-        NSTableCellView *cellView = [tableView makeViewWithIdentifier:@"ImageCell" owner:self];
-        [cellView.textField setStringValue:entity.name];
-        [cellView.imageView setImage:[(DesktopImageEntity *)entity image]];
+        NSTableCellView *cellView = [tableView makeViewWithIdentifier:kImageCellIdentifier owner:self];
+        cellView.textField.stringValue = entity.name;
+        cellView.imageView.image = ((DesktopImageEntity *)entity).image;
         return cellView;
     }
     return nil;
 }
 
 - (BOOL)tableView:(NSTableView *)tableView isGroupRow:(NSInteger)row {
-    DesktopEntity *entity = _tableContents[row];
-    if ([entity isKindOfClass:[DesktopFolderEntity class]]) {
-        return YES;
-    }
-    return NO;
+    DesktopEntity *entity = self.tableContents[row];
+    return [entity isKindOfClass:[DesktopFolderEntity class]];
 }
 
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
-    DesktopEntity *entity = _tableContents[row];
-    if ([entity isKindOfClass:[DesktopFolderEntity class]]) {
-        return 22;
-    }
-    return [tableView rowHeight];
+    DesktopEntity *entity = self.tableContents[row];
+    return [entity isKindOfClass:[DesktopFolderEntity class]] ? 22 : tableView.rowHeight;
 }
 
 - (IBAction)insertNewRow:(id)sender {
     NSOpenPanel *openPanel = [NSOpenPanel openPanel];
-    [openPanel setAllowsMultipleSelection:YES];
-    [openPanel setAllowedFileTypes:[NSImage imageTypes]];
+    openPanel.allowsMultipleSelection = YES;
+    openPanel.allowedFileTypes = [NSImage imageTypes];
     [openPanel beginSheetModalForWindow:self.window completionHandler:^(NSInteger result) {
         if (result == NSOKButton) {
-            NSInteger index = [_tableView selectedRow];
+            NSInteger index = self.tableView.selectedRow;
             index++;
-            NSArray *urls = [openPanel URLs];
-            [_tableView beginUpdates];
+            NSArray *urls = openPanel.URLs;
+            [self.tableView beginUpdates];
             for (NSURL *url in urls) {
                 DesktopEntity *entity = [DesktopEntity entityForURL:url];
                 if (entity) {
-                    [_tableContents insertObject:entity atIndex:index];
-                    [_tableView insertRowsAtIndexes:[NSIndexSet indexSetWithIndex:index] withAnimation:NSTableViewAnimationSlideDown];
+                    self.tableContents[index] = entity;
+                    [self.tableView insertRowsAtIndexes:[NSIndexSet indexSetWithIndex:index] withAnimation:NSTableViewAnimationSlideDown];
                     index++;
                 }
             }
-            [_tableView endUpdates];
-            [_tableView scrollRowToVisible:index];
+            [self.tableView endUpdates];
+            [self.tableView scrollRowToVisible:index];
         }
     }];
 }
 
 - (IBAction)removeSelectedRows:(id)sender {
-    NSIndexSet *indexes = [_tableView selectedRowIndexes];
-    [_tableContents removeObjectsAtIndexes:indexes];
-    [_tableView removeRowsAtIndexes:indexes withAnimation:NSTableViewAnimationSlideDown];
+    NSIndexSet *indexes = self.tableView.selectedRowIndexes;
+    [self.tableContents removeObjectsAtIndexes:indexes];
+    [self.tableView removeRowsAtIndexes:indexes withAnimation:NSTableViewAnimationSlideDown];
 }
 
 - (IBAction)locateInFinder:(id)sender {
-    NSInteger selectedRow = [_tableView rowForView:sender];
-    DesktopEntity *entity = _tableContents[selectedRow];
-    [[NSWorkspace sharedWorkspace] activateFileViewerSelectingURLs:@[[entity fileURL]]];
+    NSInteger selectedRow = [self.tableView rowForView:sender];
+    DesktopEntity *entity = self.tableContents[selectedRow];
+    [[NSWorkspace sharedWorkspace] activateFileViewerSelectingURLs:@[entity.fileURL]];
 }
 
 @end

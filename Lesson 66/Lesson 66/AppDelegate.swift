@@ -15,32 +15,31 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	var leftView = ColorView()
 	var rightView = ColorView()
 
-	func applicationDidFinishLaunching(aNotification: NSNotification) {
+	func applicationDidFinishLaunching(_ aNotification: Notification) {
 		leftView.translatesAutoresizingMaskIntoConstraints = false
 		rightView.translatesAutoresizingMaskIntoConstraints = false
 		
 		guard let view = window.contentView else { return }
 		
-		let leftConstraints: [NSLayoutConstraint] = [
-			leftView.topAnchor.constraintEqualToAnchor(view.topAnchor),
-			leftView.leftAnchor.constraintEqualToAnchor(view.leftAnchor),
-			leftView.rightAnchor.constraintEqualToAnchor(view.centerXAnchor),
-			leftView.widthAnchor.constraintGreaterThanOrEqualToConstant(150),
-			leftView.heightAnchor.constraintEqualToConstant(100)
+		let leftConstraints = [
+			leftView.topAnchor.constraint(equalTo: view.topAnchor),
+			leftView.leftAnchor.constraint(equalTo: view.leftAnchor),
+			leftView.rightAnchor.constraint(equalTo: view.centerXAnchor),
+			leftView.widthAnchor.constraint(greaterThanOrEqualToConstant: 150),
+			leftView.heightAnchor.constraint(equalToConstant: 100)
 		]
 		
-		let rightConstraints: [NSLayoutConstraint] = [
-			rightView.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor, constant: 50),
-			rightView.centerYAnchor.constraintEqualToAnchor(view.centerYAnchor),
-			rightView.widthAnchor.constraintEqualToConstant(100),
-			rightView.heightAnchor.constraintEqualToConstant(100)
+		let rightConstraints = [
+			rightView.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 50),
+			rightView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+			rightView.widthAnchor.constraint(equalToConstant: 100),
+			rightView.heightAnchor.constraint(equalToConstant: 100)
 		]
 		
 		view.addSubview(leftView)
 		view.addSubview(rightView)
-		
-		NSLayoutConstraint.activateConstraints(leftConstraints)
-		NSLayoutConstraint.activateConstraints(rightConstraints)
+        
+		NSLayoutConstraint.activate(leftConstraints + rightConstraints)
 	}
 }
 

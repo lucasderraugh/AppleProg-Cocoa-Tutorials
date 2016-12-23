@@ -3,17 +3,19 @@
 //  Lesson 27
 //
 //  Created by Lucas Derraugh on 12/31/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2011 Lucas Derraugh. All rights reserved.
 //
 
 #import "RectangleView.h"
 
-@implementation RectangleView
+@implementation RectangleView {
+    NSPoint startPoint;
+    NSPoint endPoint;
+    BOOL isOval;
+}
 
-- (id)initWithFrame:(NSRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
+- (instancetype)initWithFrame:(NSRect)frame {
+    if (self = [super initWithFrame:frame]) {
         isOval = YES;
     }
     return self;
@@ -21,13 +23,15 @@
 
 - (void)drawRect:(NSRect)dirtyRect
 {
-    [[NSColor redColor] set];
+    [NSColor.redColor set];
     NSRectFill(dirtyRect);
-    [[NSColor blueColor] set];
-    if (isOval)
+    
+    [NSColor.blueColor set];
+    if (isOval) {
         [[NSBezierPath bezierPathWithOvalInRect:NSMakeRect(startPoint.x, startPoint.y, endPoint.x-startPoint.x, endPoint.y-startPoint.y)] fill];
-    else
+    } else {
         [[NSBezierPath bezierPathWithRect:NSMakeRect(startPoint.x, startPoint.y, endPoint.x-startPoint.x, endPoint.y-startPoint.y)] fill];
+    }
 }
 
 - (BOOL)acceptsFirstResponder {
@@ -35,8 +39,9 @@
 }
 
 - (void)keyDown:(NSEvent *)theEvent {
-    if ([[theEvent characters] isEqualToString:@"o"])
+    if ([theEvent.characters isEqualToString:@"o"]) {
         isOval = !isOval;
+    }
     [self setNeedsDisplay:YES];
 }
 

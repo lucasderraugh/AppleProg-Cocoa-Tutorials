@@ -264,6 +264,7 @@
 		1DEEE5B814CA871A0079FA9E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Lesson 30/Lesson 30-Prefix.pch";
 				INFOPLIST_FILE = "Lesson 30/Lesson 30-Info.plist";
@@ -275,6 +276,7 @@
 		1DEEE5B914CA871A0079FA9E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Lesson 30/Lesson 30-Prefix.pch";
 				INFOPLIST_FILE = "Lesson 30/Lesson 30-Info.plist";

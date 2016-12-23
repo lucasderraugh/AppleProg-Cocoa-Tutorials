@@ -11,10 +11,10 @@
 @interface Person : NSObject
 
 @property (copy) NSString *name;
+@property NSInteger age;
 @property (readonly, copy) NSMutableArray *children;
-@property int age;
 
-- (id)initWithName:(NSString *)name age:(int)age;
+- (instancetype)initWithName:(NSString *)name age:(NSInteger)age;
 - (void)addChild:(Person *)p;
 - (void)removeChild:(Person *)p;
 

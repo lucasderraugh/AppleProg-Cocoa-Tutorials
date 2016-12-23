@@ -10,13 +10,12 @@
 
 @implementation Person
 
-- (id)init {
+- (instancetype)init {
     return [self initWithName:@"Test Name" age:0];
 }
 
-- (id)initWithName:(NSString *)name age:(int)age {
-    self = [super init];
-    if (self) {
+- (instancetype)initWithName:(NSString *)name age:(NSInteger)age {
+    if (self = [super init]) {
         _name = [name copy];
         _children = [[NSMutableArray alloc] init];
         _age = age;
@@ -25,11 +24,11 @@
 }
 
 - (void)addChild:(Person *)p {
-    [_children addObject:p];
+    [self.children addObject:p];
 }
 
 - (void)removeChild:(Person *)p {
-    [_children removeObject:p];
+    [self.children removeObject:p];
 }
 
 @end

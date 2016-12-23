@@ -15,8 +15,8 @@ class CircleView: NSView {
     }
     
     override func updateLayer() {
-        layer?.backgroundColor = NSColor.whiteColor().CGColor
-        layer?.cornerRadius = frame.size.width/2.0
+        layer?.backgroundColor = NSColor.white.cgColor
+        layer?.cornerRadius = frame.width/2.0
     }
     
 }

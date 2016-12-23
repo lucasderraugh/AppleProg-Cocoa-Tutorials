@@ -15,7 +15,7 @@ class SecondViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nameLabel.stringValue = representedObject as String
+        nameLabel.stringValue = representedObject as! String
     }
     
 }

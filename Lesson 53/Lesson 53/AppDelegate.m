@@ -9,15 +9,22 @@
 #import "AppDelegate.h"
 #import "DesktopEntity.h"
 
-@implementation AppDelegate {
-    NSMutableArray *_tableContents;
-}
+@interface AppDelegate ()
+
+@property NSMutableArray *tableContents;
+
+@end
+
+@implementation AppDelegate
+
+NSString *const kGroupCellIdentifier = @"GroupCell";
+NSString *const kImageCellIdentifier = @"ImageCell";
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification {
     _tableContents = [[NSMutableArray alloc] init];
     NSString *path = @"/Library/Application Support/Apple/iChat Icons/";
-    NSURL *url = [[NSURL alloc] initFileURLWithPath:path];
-    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSURL *url = [NSURL fileURLWithPath:path];
+    NSFileManager *fileManager = NSFileManager.defaultManager;
     NSDirectoryEnumerator *directoryEnum = [fileManager enumeratorAtURL:url
                                              includingPropertiesForKeys:nil
                                                                 options:0
@@ -27,69 +34,65 @@
     
     for (NSURL *fileURL in directoryEnum) {
         DesktopEntity *entity = [DesktopEntity entityForURL:fileURL];
-        if ([entity isKindOfClass:[DesktopEntity class]])
-            [_tableContents addObject:entity];
+        if ([entity isKindOfClass:[DesktopEntity class]]) {
+            [self.tableContents addObject:entity];
+        }
     }
-    [_tableView reloadData];
+    [self.tableView reloadData];
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    return [_tableContents count];
+    return self.tableContents.count;
 }
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
-    DesktopEntity *entity = _tableContents[row];
+    DesktopEntity *entity = self.tableContents[row];
     if ([entity isKindOfClass:[DesktopFolderEntity class]]) {
-        NSTextField *groupCell = [tableView makeViewWithIdentifier:@"GroupCell" owner:self];
-        [groupCell setStringValue:entity.name];
+        NSTextField *groupCell = [tableView makeViewWithIdentifier:kGroupCellIdentifier owner:self];
+        groupCell.stringValue = entity.name;
         return groupCell;
     } if ([entity isKindOfClass:[DesktopImageEntity class]]) {
-        NSTableCellView *cellView = [tableView makeViewWithIdentifier:@"ImageCell" owner:self];
-        [cellView.textField setStringValue:entity.name];
-        [cellView.imageView setImage:[(DesktopImageEntity *)entity image]];
+        NSTableCellView *cellView = [tableView makeViewWithIdentifier:kImageCellIdentifier owner:self];
+        cellView.textField.stringValue = entity.name;
+        cellView.imageView.image = [(DesktopImageEntity *)entity image];
         return cellView;
     }
     return nil;
 }
 
 - (BOOL)tableView:(NSTableView *)tableView isGroupRow:(NSInteger)row {
-    DesktopEntity *entity = _tableContents[row];
-    if ([entity isKindOfClass:[DesktopFolderEntity class]]) {
-        return YES;
-    }
-    return NO;
+    DesktopEntity *entity = self.tableContents[row];
+    return [entity isKindOfClass:[DesktopFolderEntity class]];
 }
 
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
-    DesktopEntity *entity = _tableContents[row];
-    if ([entity isKindOfClass:[DesktopFolderEntity class]]) {
-        return 22;
-    }
-    return [tableView rowHeight];
+    DesktopEntity *entity = self.tableContents[row];
+    return [entity isKindOfClass:[DesktopFolderEntity class]] ? 22 : tableView.rowHeight;
 }
 
+// Inserting doesn't make much sense in our situtation (need a valid URL)
 - (IBAction)insertNewRow:(id)sender {
-    NSDictionary *obj = @{@"name": @"Temp Row Name"};
-    NSInteger index = [_tableView selectedRow];
-    index++;
+    NSTableView *tableView = self.tableView;
+    NSInteger index = tableView.selectedRow + 1;
     
-    [_tableContents insertObject:obj atIndex:index];
-    [_tableView beginUpdates];
-    [_tableView insertRowsAtIndexes:[NSIndexSet indexSetWithIndex:index] withAnimation:NSTableViewAnimationSlideDown];
-    [_tableView scrollRowToVisible:index];
-    [_tableView endUpdates];
+    self.tableContents[index] = @{@"name": @"Temp Row Name"};
+    [tableView beginUpdates];
+    [tableView insertRowsAtIndexes:[NSIndexSet indexSetWithIndex:index] withAnimation:NSTableViewAnimationSlideDown];
+    [tableView scrollRowToVisible:index];
+    [tableView endUpdates];
 }
 
 - (IBAction)removeSelectedRows:(id)sender {
-    NSIndexSet *indexes = [_tableView selectedRowIndexes];
-    [_tableContents removeObjectsAtIndexes:indexes];
-    [_tableView removeRowsAtIndexes:indexes withAnimation:NSTableViewAnimationSlideDown];
+    NSTableView *tableView = self.tableView;
+    NSIndexSet *indexes = tableView.selectedRowIndexes;
+    [self.tableContents removeObjectsAtIndexes:indexes];
+    [tableView removeRowsAtIndexes:indexes withAnimation:NSTableViewAnimationSlideDown];
 }
 
 - (IBAction)locateInFinder:(id)sender {
-    NSInteger selectedRow = [_tableView rowForView:sender];
-    DesktopEntity *entity = _tableContents[selectedRow];
-    [[NSWorkspace sharedWorkspace] selectFile:[entity.fileURL path] inFileViewerRootedAtPath:nil];
+    NSInteger selectedRow = [self.tableView rowForView:sender];
+    DesktopEntity *entity = self.tableContents[selectedRow];
+    [[NSWorkspace sharedWorkspace] selectFile:entity.fileURL.path inFileViewerRootedAtPath:@""];
 }
 
 

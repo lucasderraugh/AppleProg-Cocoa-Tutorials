@@ -3,31 +3,20 @@
 //  Lesson 41
 //
 //  Created by Lucas Derraugh on 6/2/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Lucas Derraugh. All rights reserved.
 //
 
 #import "SquareView.h"
 
 @implementation SquareView
-@synthesize delegate;
-
-- (id)initWithFrame:(NSRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code here.
-    }
-    
-    return self;
-}
 
 - (void)drawRect:(NSRect)dirtyRect
 {
-    [[NSColor redColor] set];
-    int num = [delegate numberOfSquaresInSquareView:self];
-    for (int i = 0; i < num; i++) {
-        float x = arc4random() % (int)self.frame.size.width - 20;
-        float y = arc4random() % (int)self.frame.size.height - 20;
+    [NSColor.redColor set];
+    NSInteger num = [self.delegate numberOfSquaresInSquareView:self];
+    for (NSInteger i = 0; i < num; i++) {
+        CGFloat x = arc4random() % (NSInteger)self.frame.size.width - 20;
+        CGFloat y = arc4random() % (NSInteger)self.frame.size.height - 20;
         NSRectFill(NSMakeRect(x, y, 20, 20));
     }
 }

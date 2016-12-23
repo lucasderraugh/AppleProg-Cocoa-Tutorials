@@ -3,15 +3,13 @@
 //  Lesson 24-26
 //
 //  Created by Lucas Derraugh on 3/4/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Lucas Derraugh. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
 
-@interface DropView : NSView <NSDraggingDestination> {
-    NSImage *image;
-}
+@interface DropView : NSView <NSDraggingDestination>
 
-@property (retain) NSImage *image;
+@property NSImage *image;
 
 @end

@@ -8,14 +8,18 @@
 
 #import "AppDelegate.h"
 
-@implementation AppDelegate {
-    NSMutableArray *_tableContents;
-}
+@interface AppDelegate ()
+
+@property NSMutableArray *tableContents;
+
+@end
+
+@implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification {
     _tableContents = [[NSMutableArray alloc] init];
     NSString *path = @"/Library/Application Support/Apple/iChat Icons/Flags";
-    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSFileManager *fileManager = NSFileManager.defaultManager;
     NSDirectoryEnumerator *directoryEnum = [fileManager enumeratorAtPath:path];
     
     NSString *file;
@@ -23,22 +27,21 @@
         NSString *filePath = [path stringByAppendingFormat:@"/%@", file];
         NSDictionary *obj = @{@"image": [[NSImage alloc] initByReferencingFile:filePath],
                               @"name": [file stringByDeletingPathExtension]};
-        [_tableContents addObject:obj];
+        [self.tableContents addObject:obj];
     }
-    [_tableView reloadData];
+    [self.tableView reloadData];
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    return [_tableContents count];
+    return self.tableContents.count;
 }
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
-    NSDictionary *flag = _tableContents[row];
-    NSString *identifier = [tableColumn identifier];
-    if ([identifier isEqualToString:@"MainCell"]) {
+    NSDictionary *flag = self.tableContents[row];
+    if ([tableColumn.identifier isEqualToString:@"MainCell"]) {
         NSTableCellView *cellView = [tableView makeViewWithIdentifier:@"MainCell" owner:self];
-        [cellView.textField setStringValue:flag[@"name"]];
-        [cellView.imageView setImage:flag[@"image"]];
+        cellView.textField.stringValue = flag[@"name"];
+        cellView.imageView.image = flag[@"image"];
         return cellView;
     }
     return nil;

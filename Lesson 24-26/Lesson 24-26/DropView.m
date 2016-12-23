@@ -3,19 +3,15 @@
 //  Lesson 24-26
 //
 //  Created by Lucas Derraugh on 3/4/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Lucas Derraugh. All rights reserved.
 //
 
 #import "DropView.h"
 
 @implementation DropView
 
-@synthesize image;
-
-- (id)initWithFrame:(NSRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
+- (instancetype)initWithFrame:(NSRect)frame {
+    if (self = [super initWithFrame:frame]) {
         [self registerForDraggedTypes:[NSArray arrayWithObject:NSURLPboardType]];
     }
     
@@ -37,8 +33,7 @@
 - (BOOL)performDragOperation:(id<NSDraggingInfo>)sender {
     if ([NSImage canInitWithPasteboard:[sender draggingPasteboard]]) {
         NSImage *newImage = [[NSImage alloc] initWithPasteboard:[sender draggingPasteboard]];
-        [self setImage:newImage];
-        [newImage release];
+        self.image = newImage;
         return YES;
     }
     return NO;
@@ -51,17 +46,12 @@
 - (void)drawRect:(NSRect)dirtyRect
 {
     [super drawRect:dirtyRect];
-    if (!image) {
-        [[NSColor redColor] set];
+    if (!self.image) {
+        [NSColor.redColor set];
         NSRectFill(dirtyRect);
     } else {
-        [image drawInRect:dirtyRect fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1];
+        [self.image drawInRect:dirtyRect fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1];
     }
-}
-
-- (void)dealloc {
-    [image release];
-    [super dealloc];
 }
 
 @end

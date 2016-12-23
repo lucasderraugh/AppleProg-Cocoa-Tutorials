@@ -3,12 +3,15 @@
 //  Lesson 39
 //
 //  Created by Lucas Derraugh on 5/17/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Lucas Derraugh. All rights reserved.
 //
 
 #import "Lesson_39View.h"
 
-@implementation Lesson_39View
+@implementation Lesson_39View {
+    NSRect _rect;
+    NSPoint _rectMovement;
+}
 
 - (id)initWithFrame:(NSRect)frame isPreview:(BOOL)isPreview
 {
@@ -34,8 +37,9 @@
 - (void)drawRect:(NSRect)rect
 {
     [super drawRect:rect];
-    [[NSColor whiteColor] set];
+    [NSColor.whiteColor set];
     NSRectFill(_rect);
+    
     if (_rect.origin.x > rect.size.width - _rect.size.width)
         _rectMovement.x = -_rectMovement.x;
     if (_rect.origin.x < rect.origin.x)
@@ -46,7 +50,8 @@
         _rectMovement.y = -_rectMovement.y;
     _rect.origin.x += _rectMovement.x;
     _rect.origin.y += _rectMovement.y;
-    [[NSColor blueColor] set];
+    
+    [NSColor.blueColor set];
     NSRectFill(_rect);
 }
 

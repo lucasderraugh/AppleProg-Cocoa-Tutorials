@@ -10,10 +10,10 @@
 
 @interface DesktopEntity : NSObject <NSPasteboardWriting, NSPasteboardReading>
 
-@property (strong, nonatomic) NSURL *fileURL;
-@property (strong, readonly) NSString *name;
+@property (nonatomic) NSURL *fileURL;
+@property (readonly) NSString *name;
 
-- (id)initWithFileURL:(NSURL *)fileURL;
+- (instancetype)initWithFileURL:(NSURL *)fileURL;
 + (DesktopEntity *)entityForURL:(NSURL *)url;
 
 @end
@@ -21,7 +21,7 @@
 
 @interface DesktopImageEntity : DesktopEntity
 
-@property (strong, nonatomic) NSImage *image;
+@property (nonatomic) NSImage *image;
 
 @end
 

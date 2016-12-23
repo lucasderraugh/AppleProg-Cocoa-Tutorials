@@ -10,9 +10,9 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
-@property (assign) IBOutlet NSWindow *window;
-
-@property (strong) NSMutableArray *people;
+@property (weak) IBOutlet NSWindow *window;
 @property (weak) IBOutlet NSTableView *tableView;
+
+@property NSMutableArray *people;
 
 @end

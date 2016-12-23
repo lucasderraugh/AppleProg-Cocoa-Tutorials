@@ -14,41 +14,38 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSGestureRecognizerDelegate 
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var view: NSView!
     
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
-        view.layer?.backgroundColor = NSColor.redColor().CGColor
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
+        view.layer?.backgroundColor = NSColor.red.cgColor
     }
     
-    func applicationWillTerminate(aNotification: NSNotification) {
-        // Insert code here to tear down your application
-    }
-    
-    @IBAction func pressView(sender: NSPressGestureRecognizer) {
-        if sender.state == .Began {
-            sender.view?.layer?.backgroundColor = NSColor.randomColor().CGColor
+    @IBAction func pressView(_ sender: NSPressGestureRecognizer) {
+        if sender.state == .began {
+            sender.view?.layer?.backgroundColor = NSColor.randomColor().cgColor
         }
     }
     
-    @IBAction func panView(sender: NSPanGestureRecognizer) {
-        let t = sender.translationInView(window.contentView as? NSView)
+    @IBAction func panView(_ sender: NSPanGestureRecognizer) {
+        guard let contentView = window.contentView else { return }
+        let t = sender.translation(in: contentView)
         sender.view!.frame = NSOffsetRect(sender.view!.frame, t.x, t.y)
-        sender.setTranslation(NSZeroPoint, inView: nil)
+        sender.setTranslation(NSZeroPoint, in: nil)
     }
     
-    @IBAction func rotateView(sender: NSRotationGestureRecognizer) {
+    @IBAction func rotateView(_ sender: NSRotationGestureRecognizer) {
         let rot = sender.rotation
         let view = sender.view!
-        view.layer?.setAffineTransform(CGAffineTransformRotate(view.layer!.affineTransform(), rot))
+        view.layer?.setAffineTransform(view.layer!.affineTransform().rotated(by: rot))
         sender.rotation = 0
     }
     
-    @IBAction func magnifyView(sender: NSMagnificationGestureRecognizer) {
+    @IBAction func magnifyView(_ sender: NSMagnificationGestureRecognizer) {
         let mag = sender.magnification + 1.0
         let view = sender.view!
-        view.layer?.setAffineTransform(CGAffineTransformScale(view.layer!.affineTransform(), mag, mag))
+        view.layer?.setAffineTransform(view.layer!.affineTransform().scaledBy(x: mag, y: mag))
         sender.magnification = 0
     }
     
-    func gestureRecognizer(gestureRecognizer: NSGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: NSGestureRecognizer) -> Bool {
+    func gestureRecognizer(_ gestureRecognizer: NSGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: NSGestureRecognizer) -> Bool {
         return true
     }
     

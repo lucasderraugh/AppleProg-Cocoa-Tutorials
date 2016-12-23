@@ -8,65 +8,73 @@
 
 #import "AppDelegate.h"
 
-@implementation AppDelegate {
-    NSMutableArray *_tableContents;
-}
+@interface AppDelegate ()
+
+@property NSMutableArray *tableContents;
+
+@end
+
+@implementation AppDelegate
+
+NSString *const kNameKey = @"name";
+NSString *const kImageKey = @"image";
+NSString *const kFilePathKey = @"filePath";
+NSString *const kCellIdentifier = @"MainCell";
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification {
     _tableContents = [[NSMutableArray alloc] init];
     NSString *path = @"/Library/Application Support/Apple/iChat Icons/Flags";
-    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSFileManager *fileManager = NSFileManager.defaultManager;
     NSDirectoryEnumerator *directoryEnum = [fileManager enumeratorAtPath:path];
     
     NSString *file;
     while (file = [directoryEnum nextObject]) {
         NSString *filePath = [path stringByAppendingFormat:@"/%@", file];
-        NSDictionary *obj = @{@"image": [[NSImage alloc] initByReferencingFile:filePath],
-                              @"name": [file stringByDeletingPathExtension],
-                              @"filePath": filePath};
-        [_tableContents addObject:obj];
+        NSDictionary *obj = @{kImageKey: [[NSImage alloc] initByReferencingFile:filePath],
+                              kNameKey: [file stringByDeletingPathExtension],
+                              kFilePathKey: filePath};
+        [self.tableContents addObject:obj];
     }
-    [_tableView reloadData];
+    [self.tableView reloadData];
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    return [_tableContents count];
+    return self.tableContents.count;
 }
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
-    NSDictionary *flag = _tableContents[row];
-    NSString *identifier = [tableColumn identifier];
-    if ([identifier isEqualToString:@"MainCell"]) {
-        NSTableCellView *cellView = [tableView makeViewWithIdentifier:@"MainCell" owner:self];
-        [cellView.textField setStringValue:flag[@"name"]];
-        [cellView.imageView setImage:flag[@"image"]];
+    NSDictionary *flag = self.tableContents[row];
+    if ([tableColumn.identifier isEqualToString:kCellIdentifier]) {
+        NSTableCellView *cellView = [tableView makeViewWithIdentifier:kCellIdentifier owner:self];
+        cellView.textField.stringValue = flag[kNameKey];
+        cellView.imageView.image = flag[kImageKey];
         return cellView;
     }
     return nil;
 }
 
 - (IBAction)insertNewRow:(id)sender {
-    NSDictionary *obj = @{@"name": @"Temp Row Name"};
-    NSInteger index = [_tableView selectedRow];
-    index++;
+    NSTableView *tableView = self.tableView;
+    NSInteger index = tableView.selectedRow + 1;
     
-    [_tableContents insertObject:obj atIndex:index];
-    [_tableView beginUpdates];
-    [_tableView insertRowsAtIndexes:[NSIndexSet indexSetWithIndex:index] withAnimation:NSTableViewAnimationSlideDown];
-    [_tableView scrollRowToVisible:index];
-    [_tableView endUpdates];
+    self.tableContents[index] = @{kNameKey: @"Temp Row Name"};
+    [tableView beginUpdates];
+    [tableView insertRowsAtIndexes:[NSIndexSet indexSetWithIndex:index] withAnimation:NSTableViewAnimationSlideDown];
+    [tableView scrollRowToVisible:index];
+    [tableView endUpdates];
 }
 
 - (IBAction)removeSelectedRows:(id)sender {
-    NSIndexSet *indexes = [_tableView selectedRowIndexes];
-    [_tableContents removeObjectsAtIndexes:indexes];
-    [_tableView removeRowsAtIndexes:indexes withAnimation:NSTableViewAnimationSlideDown];
+    NSTableView *tableView = self.tableView;
+    NSIndexSet *indexes = tableView.selectedRowIndexes;
+    [self.tableContents removeObjectsAtIndexes:indexes];
+    [tableView removeRowsAtIndexes:indexes withAnimation:NSTableViewAnimationSlideDown];
 }
 
 - (IBAction)locateInFinder:(id)sender {
-    NSInteger selectedRow = [_tableView rowForView:sender];
-    NSDictionary *obj = _tableContents[selectedRow];
-    [[NSWorkspace sharedWorkspace] selectFile:obj[@"filePath"] inFileViewerRootedAtPath:nil];
+    NSInteger selectedRow = [self.tableView rowForView:sender];
+    NSDictionary *obj = self.tableContents[selectedRow];
+    [[NSWorkspace sharedWorkspace] selectFile:obj[kFilePathKey] inFileViewerRootedAtPath:@""];
 }
 
 @end

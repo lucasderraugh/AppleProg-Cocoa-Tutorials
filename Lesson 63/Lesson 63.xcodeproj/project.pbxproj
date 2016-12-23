@@ -10,20 +10,9 @@
 		1D0C2DE61A54D16600A234E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0C2DE51A54D16600A234E1 /* AppDelegate.swift */; };
 		1D0C2DE81A54D16600A234E1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D0C2DE71A54D16600A234E1 /* Images.xcassets */; };
 		1D0C2DEB1A54D16600A234E1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D0C2DE91A54D16600A234E1 /* MainMenu.xib */; };
-		1D0C2DF71A54D16600A234E1 /* Lesson_63Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0C2DF61A54D16600A234E1 /* Lesson_63Tests.swift */; };
 		1DCEC40F1A54ECFE00FDC09F /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCEC40E1A54ECFE00FDC09F /* DrawingView.swift */; };
 		1DCEC4111A54EED400FDC09F /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCEC4101A54EED400FDC09F /* CircleView.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		1D0C2DF11A54D16600A234E1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1D0C2DD81A54D16600A234E1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1D0C2DDF1A54D16600A234E1;
-			remoteInfo = "Lesson 63";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1D0C2DE01A54D16600A234E1 /* Lesson 63.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lesson 63.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -31,22 +20,12 @@
 		1D0C2DE51A54D16600A234E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D0C2DE71A54D16600A234E1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1D0C2DEA1A54D16600A234E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		1D0C2DF01A54D16600A234E1 /* Lesson 63Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lesson 63Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D0C2DF51A54D16600A234E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1D0C2DF61A54D16600A234E1 /* Lesson_63Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson_63Tests.swift; sourceTree = "<group>"; };
 		1DCEC40E1A54ECFE00FDC09F /* DrawingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
 		1DCEC4101A54EED400FDC09F /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		1D0C2DDD1A54D16600A234E1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1D0C2DED1A54D16600A234E1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -60,7 +39,6 @@
 			isa = PBXGroup;
 			children = (
 				1D0C2DE21A54D16600A234E1 /* Lesson 63 */,
-				1D0C2DF31A54D16600A234E1 /* Lesson 63Tests */,
 				1D0C2DE11A54D16600A234E1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,7 +47,6 @@
 			isa = PBXGroup;
 			children = (
 				1D0C2DE01A54D16600A234E1 /* Lesson 63.app */,
-				1D0C2DF01A54D16600A234E1 /* Lesson 63Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,23 +72,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1D0C2DF31A54D16600A234E1 /* Lesson 63Tests */ = {
-			isa = PBXGroup;
-			children = (
-				1D0C2DF61A54D16600A234E1 /* Lesson_63Tests.swift */,
-				1D0C2DF41A54D16600A234E1 /* Supporting Files */,
-			);
-			path = "Lesson 63Tests";
-			sourceTree = "<group>";
-		};
-		1D0C2DF41A54D16600A234E1 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				1D0C2DF51A54D16600A234E1 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,39 +92,18 @@
 			productReference = 1D0C2DE01A54D16600A234E1 /* Lesson 63.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1D0C2DEF1A54D16600A234E1 /* Lesson 63Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1D0C2DFD1A54D16600A234E1 /* Build configuration list for PBXNativeTarget "Lesson 63Tests" */;
-			buildPhases = (
-				1D0C2DEC1A54D16600A234E1 /* Sources */,
-				1D0C2DED1A54D16600A234E1 /* Frameworks */,
-				1D0C2DEE1A54D16600A234E1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1D0C2DF21A54D16600A234E1 /* PBXTargetDependency */,
-			);
-			name = "Lesson 63Tests";
-			productName = "Lesson 63Tests";
-			productReference = 1D0C2DF01A54D16600A234E1 /* Lesson 63Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		1D0C2DD81A54D16600A234E1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Lucas Derraugh";
 				TargetAttributes = {
 					1D0C2DDF1A54D16600A234E1 = {
 						CreatedOnToolsVersion = 6.1.1;
-					};
-					1D0C2DEF1A54D16600A234E1 = {
-						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = 1D0C2DDF1A54D16600A234E1;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
@@ -182,7 +121,6 @@
 			projectRoot = "";
 			targets = (
 				1D0C2DDF1A54D16600A234E1 /* Lesson 63 */,
-				1D0C2DEF1A54D16600A234E1 /* Lesson 63Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -194,13 +132,6 @@
 			files = (
 				1D0C2DE81A54D16600A234E1 /* Images.xcassets in Resources */,
 				1D0C2DEB1A54D16600A234E1 /* MainMenu.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1D0C2DEE1A54D16600A234E1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,23 +148,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1D0C2DEC1A54D16600A234E1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1D0C2DF71A54D16600A234E1 /* Lesson_63Tests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		1D0C2DF21A54D16600A234E1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1D0C2DDF1A54D16600A234E1 /* Lesson 63 */;
-			targetProxy = 1D0C2DF11A54D16600A234E1 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1D0C2DE91A54D16600A234E1 /* MainMenu.xib */ = {
@@ -260,15 +175,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -302,8 +221,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -312,6 +233,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -321,6 +243,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
@@ -331,7 +254,9 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Lesson 63/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "lucasderraugh.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -342,43 +267,9 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Lesson 63/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "lucasderraugh.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		1D0C2DFE1A54D16600A234E1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Lesson 63Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lesson 63.app/Contents/MacOS/Lesson 63";
-			};
-			name = Debug;
-		};
-		1D0C2DFF1A54D16600A234E1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Lesson 63Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lesson 63.app/Contents/MacOS/Lesson 63";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -399,15 +290,6 @@
 			buildConfigurations = (
 				1D0C2DFB1A54D16600A234E1 /* Debug */,
 				1D0C2DFC1A54D16600A234E1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1D0C2DFD1A54D16600A234E1 /* Build configuration list for PBXNativeTarget "Lesson 63Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1D0C2DFE1A54D16600A234E1 /* Debug */,
-				1D0C2DFF1A54D16600A234E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

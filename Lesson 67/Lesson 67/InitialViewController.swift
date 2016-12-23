@@ -13,10 +13,10 @@ class InitialViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.layer?.backgroundColor = NSColor.redColor().CGColor
+        view.layer?.backgroundColor = NSColor.red.cgColor
     }
     
-    @IBAction func presentModalVC(sender: NSButton) {
+    @IBAction func presentModalVC(_ sender: NSButton) {
         let modalVC = ModalViewController()
         presentViewController(modalVC, animator: ModalAnimator())
     }

@@ -13,11 +13,11 @@ class ModalViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.layer?.backgroundColor = NSColor.yellowColor().CGColor
+        view.layer?.backgroundColor = NSColor.yellow.cgColor
         view.layer?.cornerRadius = 5
     }
     
-    @IBAction func dismissVC(sender: NSButton) {
+    @IBAction func dismissVC(_ sender: NSButton) {
         dismissViewController(self)
     }
 }

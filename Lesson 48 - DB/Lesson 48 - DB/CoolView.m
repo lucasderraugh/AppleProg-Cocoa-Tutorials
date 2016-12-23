@@ -12,13 +12,12 @@
 
 - (void)drawRect:(NSRect)dirtyRect {
     NSGraphicsContext *context = [NSGraphicsContext currentContext];
-    if ([context isDrawingToScreen]) {
-        [[NSColor redColor] set];
-        NSRectFill([self bounds]);
+    if (context.isDrawingToScreen) {
+        [NSColor.redColor set];
     } else {
-        [[NSColor blueColor] set];
-        NSRectFill([self bounds]);
+        [NSColor.blueColor set];
     }
+    NSRectFill(self.bounds);
 }
 
 @end

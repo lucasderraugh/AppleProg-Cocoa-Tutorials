@@ -16,8 +16,8 @@
     
     _tableContents = [[NSMutableArray alloc] init];
     NSString *path = @"/Library/Application Support/Apple/iChat Icons/";
-    NSURL *url = [[NSURL alloc] initFileURLWithPath:path];
-    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSURL *url = [NSURL fileURLWithPath:path];
+    NSFileManager *fileManager = NSFileManager.defaultManager;
     NSDirectoryEnumerator *dirEnum = [fileManager enumeratorAtURL:url
                                        includingPropertiesForKeys:@[NSURLIsDirectoryKey]
                                                           options:0
@@ -37,16 +37,9 @@
 }
 
 - (IBAction)locateInFinder:(id)sender {
-    NSInteger selectedRow = [_tableView rowForView:sender];
-    DesktopEntity *entity = _tableContents[selectedRow];
-    [[NSWorkspace sharedWorkspace] activateFileViewerSelectingURLs:@[[entity fileURL]]];
-}
-
-- (IBAction)remove:(id)sender {
-    NSIndexSet *indexes = [_tableView selectedRowIndexes];
-    //[_arrayController removeObjectsAtArrangedObjectIndexes:indexes];
-    [_tableContents removeObjectsAtIndexes:indexes];
-    [_tableView removeRowsAtIndexes:indexes withAnimation:NSTableViewAnimationSlideDown];
+    NSInteger selectedRow = [self.tableView rowForView:sender];
+    DesktopEntity *entity = self.tableContents[selectedRow];
+    [[NSWorkspace sharedWorkspace] activateFileViewerSelectingURLs:@[entity.fileURL]];
 }
 
 @end

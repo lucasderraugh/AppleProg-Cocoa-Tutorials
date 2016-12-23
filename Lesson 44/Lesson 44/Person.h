@@ -10,7 +10,7 @@
 
 @interface Person : NSObject
 
-@property (strong) NSString *name;
-@property int age;
+@property (copy) NSString *name;
+@property NSInteger age;
 
 @end

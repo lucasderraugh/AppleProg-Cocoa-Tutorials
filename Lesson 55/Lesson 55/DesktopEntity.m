@@ -10,9 +10,8 @@
 
 @implementation DesktopEntity
 
-- (id)initWithFileURL:(NSURL *)fileURL {
-    self = [super init];
-    if (self) {
+- (instancetype)initWithFileURL:(NSURL *)fileURL {
+    if (self = [super init]) {
         _fileURL = fileURL;
     }
     return self;

@@ -10,18 +10,17 @@
 
 @implementation AppDelegate
 
-- (id)init {
-    self = [super init];
-    if (self) {
+- (instancetype)init {
+    if (self = [super init]) {
         _people = [[NSMutableArray alloc] init];
     }
     return self;
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification {
-    [_tableView setSortDescriptors:
-     @[[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES selector:@selector(caseInsensitiveCompare:)],
-    [NSSortDescriptor sortDescriptorWithKey:@"age" ascending:YES]]];
+    NSArray *descriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES selector:@selector(caseInsensitiveCompare:)],
+                             [NSSortDescriptor sortDescriptorWithKey:@"age" ascending:YES]];
+    [self.tableView setSortDescriptors:descriptors];
 }
 
 @end

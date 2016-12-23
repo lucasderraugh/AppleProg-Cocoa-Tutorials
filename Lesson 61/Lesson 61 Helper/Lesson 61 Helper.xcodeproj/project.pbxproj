@@ -14,21 +14,7 @@
 		1D215A9B198DCF44004A4BF3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D215A9A198DCF44004A4BF3 /* AppDelegate.m */; };
 		1D215A9E198DCF44004A4BF3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D215A9C198DCF44004A4BF3 /* MainMenu.xib */; };
 		1D215AA0198DCF44004A4BF3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D215A9F198DCF44004A4BF3 /* Images.xcassets */; };
-		1D215AA7198DCF44004A4BF3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D215AA6198DCF44004A4BF3 /* XCTest.framework */; };
-		1D215AA8198DCF44004A4BF3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D215A87198DCF44004A4BF3 /* Cocoa.framework */; };
-		1D215AB0198DCF44004A4BF3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D215AAE198DCF44004A4BF3 /* InfoPlist.strings */; };
-		1D215AB2198DCF44004A4BF3 /* Lesson_61_HelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D215AB1198DCF44004A4BF3 /* Lesson_61_HelperTests.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		1D215AA9198DCF44004A4BF3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1D215A7C198DCF44004A4BF3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1D215A83198DCF44004A4BF3;
-			remoteInfo = "Lesson 61 Helper";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1D215A84198DCF44004A4BF3 /* Lesson 61 Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lesson 61 Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,11 +31,7 @@
 		1D215A9A198DCF44004A4BF3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1D215A9D198DCF44004A4BF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		1D215A9F198DCF44004A4BF3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		1D215AA5198DCF44004A4BF3 /* Lesson 61 HelperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lesson 61 HelperTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D215AA6198DCF44004A4BF3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		1D215AAD198DCF44004A4BF3 /* Lesson 61 HelperTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Lesson 61 HelperTests-Info.plist"; sourceTree = "<group>"; };
-		1D215AAF198DCF44004A4BF3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1D215AB1198DCF44004A4BF3 /* Lesson_61_HelperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lesson_61_HelperTests.m; sourceTree = "<group>"; };
 		1D215AC9198DD00F004A4BF3 /* Lesson 61 Helper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Lesson 61 Helper.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,15 +44,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1D215AA2198DCF44004A4BF3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1D215AA8198DCF44004A4BF3 /* Cocoa.framework in Frameworks */,
-				1D215AA7198DCF44004A4BF3 /* XCTest.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,7 +51,6 @@
 			isa = PBXGroup;
 			children = (
 				1D215A8D198DCF44004A4BF3 /* Lesson 61 Helper */,
-				1D215AAB198DCF44004A4BF3 /* Lesson 61 HelperTests */,
 				1D215A86198DCF44004A4BF3 /* Frameworks */,
 				1D215A85198DCF44004A4BF3 /* Products */,
 			);
@@ -88,7 +60,6 @@
 			isa = PBXGroup;
 			children = (
 				1D215A84198DCF44004A4BF3 /* Lesson 61 Helper.app */,
-				1D215AA5198DCF44004A4BF3 /* Lesson 61 HelperTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,24 +109,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1D215AAB198DCF44004A4BF3 /* Lesson 61 HelperTests */ = {
-			isa = PBXGroup;
-			children = (
-				1D215AB1198DCF44004A4BF3 /* Lesson_61_HelperTests.m */,
-				1D215AAC198DCF44004A4BF3 /* Supporting Files */,
-			);
-			path = "Lesson 61 HelperTests";
-			sourceTree = "<group>";
-		};
-		1D215AAC198DCF44004A4BF3 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				1D215AAD198DCF44004A4BF3 /* Lesson 61 HelperTests-Info.plist */,
-				1D215AAE198DCF44004A4BF3 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -176,24 +129,6 @@
 			productReference = 1D215A84198DCF44004A4BF3 /* Lesson 61 Helper.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1D215AA4198DCF44004A4BF3 /* Lesson 61 HelperTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1D215AB8198DCF44004A4BF3 /* Build configuration list for PBXNativeTarget "Lesson 61 HelperTests" */;
-			buildPhases = (
-				1D215AA1198DCF44004A4BF3 /* Sources */,
-				1D215AA2198DCF44004A4BF3 /* Frameworks */,
-				1D215AA3198DCF44004A4BF3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1D215AAA198DCF44004A4BF3 /* PBXTargetDependency */,
-			);
-			name = "Lesson 61 HelperTests";
-			productName = "Lesson 61 HelperTests";
-			productReference = 1D215AA5198DCF44004A4BF3 /* Lesson 61 HelperTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -211,9 +146,6 @@
 							};
 						};
 					};
-					1D215AA4198DCF44004A4BF3 = {
-						TestTargetID = 1D215A83198DCF44004A4BF3;
-					};
 				};
 			};
 			buildConfigurationList = 1D215A7F198DCF44004A4BF3 /* Build configuration list for PBXProject "Lesson 61 Helper" */;
@@ -230,7 +162,6 @@
 			projectRoot = "";
 			targets = (
 				1D215A83198DCF44004A4BF3 /* Lesson 61 Helper */,
-				1D215AA4198DCF44004A4BF3 /* Lesson 61 HelperTests */,
 			);
 		};
 /* End PBXProject section */
@@ -247,14 +178,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1D215AA3198DCF44004A4BF3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1D215AB0198DCF44004A4BF3 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -267,23 +190,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1D215AA1198DCF44004A4BF3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1D215AB2198DCF44004A4BF3 /* Lesson_61_HelperTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		1D215AAA198DCF44004A4BF3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1D215A83198DCF44004A4BF3 /* Lesson 61 Helper */;
-			targetProxy = 1D215AA9198DCF44004A4BF3 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1D215A90198DCF44004A4BF3 /* InfoPlist.strings */ = {
@@ -308,14 +215,6 @@
 				1D215A9D198DCF44004A4BF3 /* Base */,
 			);
 			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-		1D215AAE198DCF44004A4BF3 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1D215AAF198DCF44004A4BF3 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -423,46 +322,6 @@
 			};
 			name = Release;
 		};
-		1D215AB9198DCF44004A4BF3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Lesson 61 Helper.app/Contents/MacOS/Lesson 61 Helper";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Lesson 61 Helper/Lesson 61 Helper-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Lesson 61 HelperTests/Lesson 61 HelperTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		1D215ABA198DCF44004A4BF3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Lesson 61 Helper.app/Contents/MacOS/Lesson 61 Helper";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Lesson 61 Helper/Lesson 61 Helper-Prefix.pch";
-				INFOPLIST_FILE = "Lesson 61 HelperTests/Lesson 61 HelperTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -482,14 +341,7 @@
 				1D215AB7198DCF44004A4BF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		1D215AB8198DCF44004A4BF3 /* Build configuration list for PBXNativeTarget "Lesson 61 HelperTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1D215AB9198DCF44004A4BF3 /* Debug */,
-				1D215ABA198DCF44004A4BF3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

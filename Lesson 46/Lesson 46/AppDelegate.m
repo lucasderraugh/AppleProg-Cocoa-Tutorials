@@ -12,8 +12,8 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    NSTextView *leftTextView = [[[self.splitView subviews] objectAtIndex:0] documentView];
-    [leftTextView setString:@"This is programmatic text"];
+    NSTextView *leftTextView = [[self.splitView subviews][0] documentView];
+    leftTextView.string = @"This is programmatic text";
 }
 
 - (CGFloat)splitView:(NSSplitView *)splitView constrainMinCoordinate:(CGFloat)proposedMinimumPosition ofSubviewAt:(NSInteger)dividerIndex {
@@ -25,8 +25,8 @@
 }
 
 - (BOOL)splitView:(NSSplitView *)splitView canCollapseSubview:(NSView *)subview {
-    NSView *left = [[splitView subviews] objectAtIndex:0];
-    NSView *right = [[splitView subviews] objectAtIndex:2];
+    NSView *left = [splitView subviews][0];
+    NSView *right = [splitView subviews][2];
     
     if ([subview isEqual:left] || [subview isEqual:right]) {
         return YES;

@@ -17,6 +17,7 @@
 }
 
 - (IBAction)loginItemPressed:(NSButton *)sender {
+    // NOTE: Change the bundle identifier to match the name of your helper app's bundle id
     if (!SMLoginItemSetEnabled((__bridge CFStringRef)@"com.lucasderraugh.Lesson-61-Helper", (BOOL)[sender state])) {
         NSLog(@"The login was not successful");
     }

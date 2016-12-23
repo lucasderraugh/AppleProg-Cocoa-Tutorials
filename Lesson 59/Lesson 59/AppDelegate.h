@@ -10,9 +10,10 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
-@property (assign) IBOutlet NSWindow *window;
+@property (weak) IBOutlet NSWindow *window;
 @property (weak) IBOutlet NSTableView *tableView;
-@property (strong, nonatomic) NSMutableArray *tableContents;
-@property (weak, nonatomic) IBOutlet NSArrayController *arrayController;
+@property (weak) IBOutlet NSArrayController *arrayController;
+
+@property (nonatomic) NSMutableArray *tableContents;
 
 @end

@@ -12,7 +12,7 @@ private class BackgroundView: NSView {
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
         wantsLayer = true
-        layer?.backgroundColor = NSColor(white: 0, alpha: 0.5).CGColor
+        layer?.backgroundColor = NSColor(white: 0, alpha: 0.5).cgColor
         alphaValue = 0
     }
     
@@ -20,28 +20,28 @@ private class BackgroundView: NSView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private override func mouseDown(theEvent: NSEvent) { }
+    override func mouseDown(with theEvent: NSEvent) { }
 }
 
 class ModalAnimator: NSObject, NSViewControllerPresentationAnimator {
-    private let backgroundView = BackgroundView(frame: CGRectZero)
-    private var centerYConstraint: NSLayoutConstraint!
+    fileprivate let backgroundView = BackgroundView(frame: .zero)
+    fileprivate var centerYConstraint: NSLayoutConstraint!
     
-    func animatePresentationOfViewController(viewController: NSViewController, fromViewController: NSViewController) {
+    func animatePresentation(of viewController: NSViewController, from fromViewController: NSViewController) {
         let contentView = fromViewController.view
         backgroundView.frame = contentView.bounds
-        backgroundView.autoresizingMask = [.ViewWidthSizable, .ViewHeightSizable]
+        backgroundView.autoresizingMask = [.viewWidthSizable, .viewHeightSizable]
         contentView.addSubview(backgroundView)
         
         let modalView = viewController.view
         modalView.translatesAutoresizingMaskIntoConstraints = false
-        centerYConstraint = modalView.centerYAnchor.constraintEqualToAnchor(backgroundView.centerYAnchor, constant: 100)
+        centerYConstraint = modalView.centerYAnchor.constraint(equalTo: backgroundView.centerYAnchor, constant: 100)
         backgroundView.addSubview(modalView)
-        NSLayoutConstraint.activateConstraints([
-            modalView.centerXAnchor.constraintEqualToAnchor(backgroundView.centerXAnchor),
+        NSLayoutConstraint.activate([
+            modalView.centerXAnchor.constraint(equalTo: backgroundView.centerXAnchor),
             centerYConstraint,
-            modalView.widthAnchor.constraintEqualToAnchor(backgroundView.widthAnchor, constant: -100),
-            modalView.heightAnchor.constraintEqualToAnchor(backgroundView.heightAnchor, constant: -100)
+            modalView.widthAnchor.constraint(equalTo: backgroundView.widthAnchor, constant: -100),
+            modalView.heightAnchor.constraint(equalTo: backgroundView.heightAnchor, constant: -100)
         ])
         
         NSAnimationContext.runAnimationGroup({ context in
@@ -51,13 +51,13 @@ class ModalAnimator: NSObject, NSViewControllerPresentationAnimator {
         }, completionHandler: nil)
     }
     
-    func animateDismissalOfViewController(viewController: NSViewController, fromViewController: NSViewController) {
+    func animateDismissal(of viewController: NSViewController, from fromViewController: NSViewController) {
         NSAnimationContext.runAnimationGroup({ _ in
             self.backgroundView.animator().alphaValue = 0
             self.centerYConstraint.animator().constant = 100
-        }) { 
+        }, completionHandler: {
             self.backgroundView.removeFromSuperview()
-        }
+        })
     }
 }
 

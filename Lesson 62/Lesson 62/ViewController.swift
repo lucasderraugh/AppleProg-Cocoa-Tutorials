@@ -18,9 +18,9 @@ class ViewController: NSViewController {
         // Do any additional setup after loading the view.
     }
     
-    override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
         if segue.identifier == "DetailSegue" {
-            (segue.destinationController as NSViewController).representedObject = nameField.stringValue
+            (segue.destinationController as! NSViewController).representedObject = nameField.stringValue
         }
     }
 

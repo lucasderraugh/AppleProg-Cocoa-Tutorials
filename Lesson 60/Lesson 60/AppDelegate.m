@@ -22,47 +22,67 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     NSURL *homeFolder = [NSURL fileURLWithPath:[@"~" stringByExpandingTildeInPath]];
-    NSFileManager *manager = [NSFileManager defaultManager];
-    self.files = [manager contentsOfDirectoryAtURL:homeFolder
-                        includingPropertiesForKeys:[NSArray arrayWithObject:NSURLNameKey]
-                                           options:NSDirectoryEnumerationSkipsHiddenFiles
-                                             error:nil];
+    NSFileManager *manager = NSFileManager.defaultManager;
+    _files = [manager contentsOfDirectoryAtURL:homeFolder
+                    includingPropertiesForKeys:@[NSURLNameKey]
+                                       options:NSDirectoryEnumerationSkipsHiddenFiles
+                                         error:nil];
     [self.tableView reloadData];
 }
 
+#pragma mark - NSTableViewDataSource
+
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    return [self.files count];
+    return self.files.count;
 }
+
+#pragma mark - NSTableViewDelegate
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     NSTableCellView *cell = [tableView makeViewWithIdentifier:@"Cell" owner:self];
-    [cell.textField setStringValue:self.files[row]];
+    cell.textField.stringValue = self.files[row];
     return cell;
 }
 
 - (void)tableViewSelectionDidChange:(NSNotification *)notification {
-    if ([self.tableView isEqual:[notification object]]) {
-        if ([QLPreviewPanel sharedPreviewPanelExists] && [[QLPreviewPanel sharedPreviewPanel] isVisible]) {
-            [[QLPreviewPanel sharedPreviewPanel] reloadData];
+    if ([self.tableView isEqual:notification.object]) {
+        QLPreviewPanel *panel = [QLPreviewPanel sharedPreviewPanel];
+        if ([QLPreviewPanel sharedPreviewPanelExists] && panel.isVisible) {
+            [panel reloadData];
         }
     }
 }
 
+#pragma mark - QuickLookTableViewDelegate
+
 - (void)didPressSpacebarForTableView:(NSTableView *)tableView {
-    if ([QLPreviewPanel sharedPreviewPanelExists] && [[QLPreviewPanel sharedPreviewPanel] isVisible]) {
-        [[QLPreviewPanel sharedPreviewPanel] orderOut:nil];
+    QLPreviewPanel *panel = [QLPreviewPanel sharedPreviewPanel];
+    if ([QLPreviewPanel sharedPreviewPanelExists] && panel.isVisible) {
+        [panel orderOut:nil];
     } else {
-        [[QLPreviewPanel sharedPreviewPanel] makeKeyAndOrderFront:nil];
-        [[QLPreviewPanel sharedPreviewPanel] reloadData];
+        [panel makeKeyAndOrderFront:nil];
+        [panel reloadData];
     }
 }
 
+#pragma mark - QLPreviewPanelDataSource
+
 - (NSInteger)numberOfPreviewItemsInPreviewPanel:(QLPreviewPanel *)panel {
-    return [[self.files objectsAtIndexes:[self.tableView selectedRowIndexes]] count];
+    return [self.files objectsAtIndexes:self.tableView.selectedRowIndexes].count;
 }
 
 - (id<QLPreviewItem>)previewPanel:(QLPreviewPanel *)panel previewItemAtIndex:(NSInteger)index {
-    return [self.files objectsAtIndexes:[self.tableView selectedRowIndexes]][index];
+    return [self.files objectsAtIndexes:self.tableView.selectedRowIndexes][index];
+}
+
+#pragma mark - QLPreviewPanelDelegate
+
+- (BOOL)previewPanel:(QLPreviewPanel *)panel handleEvent:(NSEvent *)event {
+    if (event.type == NSKeyDown) {
+        [self.tableView keyDown:event];
+        return YES;
+    }
+    return NO;
 }
 
 - (BOOL)acceptsPreviewPanelControl:(QLPreviewPanel *)panel {
@@ -77,14 +97,6 @@
 - (void)endPreviewPanelControl:(QLPreviewPanel *)panel {
     panel.dataSource = nil;
     panel.delegate = nil;
-}
-
-- (BOOL)previewPanel:(QLPreviewPanel *)panel handleEvent:(NSEvent *)event {
-    if ([event type] == NSKeyDown) {
-        [self.tableView keyDown:event];
-        return YES;
-    }
-    return NO;
 }
 
 @end
