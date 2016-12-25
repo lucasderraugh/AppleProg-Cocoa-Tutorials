@@ -14,24 +14,10 @@
 		1D4299BD197A515200924742 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4299BC197A515200924742 /* AppDelegate.m */; };
 		1D4299C0197A515200924742 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D4299BE197A515200924742 /* MainMenu.xib */; };
 		1D4299C2197A515200924742 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D4299C1197A515200924742 /* Images.xcassets */; };
-		1D4299C9197A515200924742 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4299C8197A515200924742 /* XCTest.framework */; };
-		1D4299CA197A515200924742 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4299A9197A515200924742 /* Cocoa.framework */; };
-		1D4299D2197A515200924742 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D4299D0197A515200924742 /* InfoPlist.strings */; };
-		1D4299D4197A515200924742 /* Lesson_60Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4299D3197A515200924742 /* Lesson_60Tests.m */; };
 		1D4299E1197A531E00924742 /* File.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4299E0197A531E00924742 /* File.m */; };
 		1DA939751982018300A8753A /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4299DD197A518500924742 /* Quartz.framework */; };
 		1DA93978198201BB00A8753A /* QuickLookTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA93977198201BB00A8753A /* QuickLookTableView.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		1D4299CB197A515200924742 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1D42999E197A515200924742 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1D4299A5197A515200924742;
-			remoteInfo = "Lesson 60";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1D4299A6197A515200924742 /* Lesson 60.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lesson 60.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,11 +34,7 @@
 		1D4299BC197A515200924742 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1D4299BF197A515200924742 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		1D4299C1197A515200924742 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		1D4299C7197A515200924742 /* Lesson 60Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lesson 60Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D4299C8197A515200924742 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		1D4299CF197A515200924742 /* Lesson 60Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Lesson 60Tests-Info.plist"; sourceTree = "<group>"; };
-		1D4299D1197A515200924742 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1D4299D3197A515200924742 /* Lesson_60Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lesson_60Tests.m; sourceTree = "<group>"; };
 		1D4299DD197A518500924742 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		1D4299DF197A531E00924742 /* File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = File.h; sourceTree = "<group>"; };
 		1D4299E0197A531E00924742 /* File.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = File.m; sourceTree = "<group>"; };
@@ -70,15 +52,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1D4299C4197A515200924742 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1D4299CA197A515200924742 /* Cocoa.framework in Frameworks */,
-				1D4299C9197A515200924742 /* XCTest.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -86,7 +59,6 @@
 			isa = PBXGroup;
 			children = (
 				1D4299AF197A515200924742 /* Lesson 60 */,
-				1D4299CD197A515200924742 /* Lesson 60Tests */,
 				1D4299A8197A515200924742 /* Frameworks */,
 				1D4299A7197A515200924742 /* Products */,
 			);
@@ -96,7 +68,6 @@
 			isa = PBXGroup;
 			children = (
 				1D4299A6197A515200924742 /* Lesson 60.app */,
-				1D4299C7197A515200924742 /* Lesson 60Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,24 +121,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1D4299CD197A515200924742 /* Lesson 60Tests */ = {
-			isa = PBXGroup;
-			children = (
-				1D4299D3197A515200924742 /* Lesson_60Tests.m */,
-				1D4299CE197A515200924742 /* Supporting Files */,
-			);
-			path = "Lesson 60Tests";
-			sourceTree = "<group>";
-		};
-		1D4299CE197A515200924742 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				1D4299CF197A515200924742 /* Lesson 60Tests-Info.plist */,
-				1D4299D0197A515200924742 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -188,24 +141,6 @@
 			productReference = 1D4299A6197A515200924742 /* Lesson 60.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1D4299C6197A515200924742 /* Lesson 60Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1D4299DA197A515200924742 /* Build configuration list for PBXNativeTarget "Lesson 60Tests" */;
-			buildPhases = (
-				1D4299C3197A515200924742 /* Sources */,
-				1D4299C4197A515200924742 /* Frameworks */,
-				1D4299C5197A515200924742 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1D4299CC197A515200924742 /* PBXTargetDependency */,
-			);
-			name = "Lesson 60Tests";
-			productName = "Lesson 60Tests";
-			productReference = 1D4299C7197A515200924742 /* Lesson 60Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -214,11 +149,6 @@
 			attributes = {
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Lucas Derraugh";
-				TargetAttributes = {
-					1D4299C6197A515200924742 = {
-						TestTargetID = 1D4299A5197A515200924742;
-					};
-				};
 			};
 			buildConfigurationList = 1D4299A1197A515200924742 /* Build configuration list for PBXProject "Lesson 60" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -234,7 +164,6 @@
 			projectRoot = "";
 			targets = (
 				1D4299A5197A515200924742 /* Lesson 60 */,
-				1D4299C6197A515200924742 /* Lesson 60Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -248,14 +177,6 @@
 				1D4299C2197A515200924742 /* Images.xcassets in Resources */,
 				1D4299BA197A515200924742 /* Credits.rtf in Resources */,
 				1D4299C0197A515200924742 /* MainMenu.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1D4299C5197A515200924742 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1D4299D2197A515200924742 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,23 +194,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1D4299C3197A515200924742 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1D4299D4197A515200924742 /* Lesson_60Tests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		1D4299CC197A515200924742 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1D4299A5197A515200924742 /* Lesson 60 */;
-			targetProxy = 1D4299CB197A515200924742 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1D4299B2197A515200924742 /* InfoPlist.strings */ = {
@@ -314,14 +219,6 @@
 				1D4299BF197A515200924742 /* Base */,
 			);
 			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-		1D4299D0197A515200924742 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1D4299D1197A515200924742 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -436,48 +333,6 @@
 			};
 			name = Release;
 		};
-		1D4299DB197A515200924742 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Lesson 60.app/Contents/MacOS/Lesson 60";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Lesson 60/Lesson 60-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Lesson 60Tests/Lesson 60Tests-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.lucasderraugh.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		1D4299DC197A515200924742 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Lesson 60.app/Contents/MacOS/Lesson 60";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Lesson 60/Lesson 60-Prefix.pch";
-				INFOPLIST_FILE = "Lesson 60Tests/Lesson 60Tests-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.lucasderraugh.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -495,15 +350,6 @@
 			buildConfigurations = (
 				1D4299D8197A515200924742 /* Debug */,
 				1D4299D9197A515200924742 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1D4299DA197A515200924742 /* Build configuration list for PBXNativeTarget "Lesson 60Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1D4299DB197A515200924742 /* Debug */,
-				1D4299DC197A515200924742 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
