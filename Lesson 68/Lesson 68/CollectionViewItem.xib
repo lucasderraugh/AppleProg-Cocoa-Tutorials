@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15400" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15400"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="CollectionViewItem" customModule="Lesson_68" customModuleProvider="target">
+            <connections>
+                <outlet property="textField" destination="f7U-fd-Z7e" id="YCe-Wj-7Sp"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="191" height="190"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box boxType="custom" borderType="none" cornerRadius="10" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="iVU-bd-t2p">
+                    <rect key="frame" x="0.0" y="0.0" width="191" height="190"/>
+                    <view key="contentView" id="XBy-Ov-bEf">
+                        <rect key="frame" x="0.0" y="0.0" width="191" height="190"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <color key="fillColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                </box>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="f7U-fd-Z7e">
+                    <rect key="frame" x="77" y="87" width="37" height="16"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="fQ9-3T-dQa">
+                        <font key="font" usesAppearanceFont="YES"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="iVU-bd-t2p" secondAttribute="trailing" id="1vG-1J-G47"/>
+                <constraint firstAttribute="bottom" secondItem="iVU-bd-t2p" secondAttribute="bottom" id="6XX-r9-O9V"/>
+                <constraint firstItem="f7U-fd-Z7e" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="bkR-C6-L8b"/>
+                <constraint firstItem="iVU-bd-t2p" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="gYA-we-gNa"/>
+                <constraint firstItem="f7U-fd-Z7e" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="gtY-Ur-Oub"/>
+                <constraint firstItem="iVU-bd-t2p" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="oos-69-bLG"/>
+            </constraints>
+            <point key="canvasLocation" x="-79" y="158"/>
+        </customView>
+    </objects>
+</document>
