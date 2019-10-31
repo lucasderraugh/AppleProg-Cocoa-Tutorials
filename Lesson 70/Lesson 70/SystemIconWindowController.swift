@@ -67,9 +67,9 @@ final class SystemIconWindowController: NSWindowController {
             return collectionViewItem
         }
 //        // Crash occurs if applying 2 sections as first snapshot, so make a fake first one - FB7389368
-        var snapshot = NSDiffableDataSourceSnapshot<Section, SystemIcon>()
-        snapshot.appendSections([.custom])
-        dataSource.apply(snapshot)
+//        var snapshot = NSDiffableDataSourceSnapshot<Section, SystemIcon>()
+//        snapshot.appendSections([.custom])
+//        dataSource.apply(snapshot)
     }
     
     private func performQuery(_ string: String) {
@@ -77,10 +77,10 @@ final class SystemIconWindowController: NSWindowController {
         let customIcons = filter(icons(for: .custom), with: string)
         let systemIcons = filter(icons(for: .system), with: string)
 
-//        if !customIcons.isEmpty {
+        if !customIcons.isEmpty {
             snapshot.appendSections([.custom])
             snapshot.appendItems(customIcons, toSection: .custom)
-//        }
+        }
         snapshot.appendSections([.system])
         snapshot.appendItems(systemIcons, toSection: .system)
 
