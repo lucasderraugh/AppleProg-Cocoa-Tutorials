@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15400" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15400"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="SystemIconWindowController" customModule="Lesson_69" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="VnP-o4-HdB" id="g1G-FJ-LId"/>
+                <outlet property="searchField" destination="Tkr-vO-iA2" id="IqU-q4-eTU"/>
+                <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="554" y="390" width="645" height="465"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <value key="minSize" type="size" width="200" height="100"/>
+            <view key="contentView" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="0.0" width="645" height="465"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <searchField wantsLayer="YES" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tkr-vO-iA2">
+                        <rect key="frame" x="20" y="423" width="516" height="22"/>
+                        <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="OdV-g5-msw">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </searchFieldCell>
+                        <connections>
+                            <outlet property="delegate" destination="-2" id="pSs-hx-oba"/>
+                        </connections>
+                    </searchField>
+                    <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="63S-Iz-evp">
+                        <rect key="frame" x="-1" y="-1" width="647" height="416"/>
+                        <clipView key="contentView" id="r37-tD-gfh">
+                            <rect key="frame" x="1" y="1" width="645" height="414"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <collectionView id="VnP-o4-HdB">
+                                    <rect key="frame" x="0.0" y="0.0" width="645" height="158"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                    <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="FkS-qh-bcJ">
+                                        <size key="itemSize" width="50" height="50"/>
+                                    </collectionViewFlowLayout>
+                                    <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </collectionView>
+                            </subviews>
+                        </clipView>
+                        <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="pXD-XC-Xv3">
+                            <rect key="frame" x="1" y="183" width="459" height="16"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="sun-7a-Ogj">
+                            <rect key="frame" x="234" y="1" width="15" height="143"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                    </scrollView>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="l6p-49-oUX">
+                        <rect key="frame" x="585" y="416" width="46" height="32"/>
+                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSMenuMixedStateTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="d95-2X-sY8">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="deleteItem:" target="-2" id="JuU-cM-egF"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="luf-Za-X12">
+                        <rect key="frame" x="538" y="416" width="47" height="32"/>
+                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSAddTemplate" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dVD-X2-RtV">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="addItem:" target="-2" id="OVT-1C-tFI"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="l6p-49-oUX" secondAttribute="trailing" constant="20" id="2fk-ga-vV4"/>
+                    <constraint firstItem="63S-Iz-evp" firstAttribute="top" secondItem="luf-Za-X12" secondAttribute="bottom" constant="8" id="9dF-9f-j1Y"/>
+                    <constraint firstItem="l6p-49-oUX" firstAttribute="leading" secondItem="luf-Za-X12" secondAttribute="trailing" constant="12" id="Agl-1K-Pti"/>
+                    <constraint firstItem="Tkr-vO-iA2" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="20" symbolic="YES" id="IuQ-ly-y2x"/>
+                    <constraint firstItem="Tkr-vO-iA2" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="20" symbolic="YES" id="LHt-yQ-XdU"/>
+                    <constraint firstAttribute="bottom" secondItem="63S-Iz-evp" secondAttribute="bottom" constant="-1" id="Nip-lP-M9r"/>
+                    <constraint firstItem="63S-Iz-evp" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="-1" id="QTs-JD-SQR"/>
+                    <constraint firstAttribute="trailing" secondItem="63S-Iz-evp" secondAttribute="trailing" constant="-1" id="UiZ-bf-R3f"/>
+                    <constraint firstItem="luf-Za-X12" firstAttribute="leading" secondItem="Tkr-vO-iA2" secondAttribute="trailing" constant="8" id="Wfo-5W-Qqa"/>
+                    <constraint firstItem="63S-Iz-evp" firstAttribute="top" secondItem="Tkr-vO-iA2" secondAttribute="bottom" constant="8" id="aU0-3X-LEP"/>
+                    <constraint firstItem="63S-Iz-evp" firstAttribute="top" secondItem="l6p-49-oUX" secondAttribute="bottom" constant="8" id="xZ5-Ia-xEb"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
+            </connections>
+            <point key="canvasLocation" x="221.5" y="244.5"/>
+        </window>
+    </objects>
+    <resources>
+        <image name="NSAddTemplate" width="11" height="11"/>
+        <image name="NSMenuMixedStateTemplate" width="10" height="2"/>
+    </resources>
+</document>
