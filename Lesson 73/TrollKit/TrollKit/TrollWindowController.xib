@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15702" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15702"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="TrollWindowController" customModule="TrollKit" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="LwN-Xs-XDU" id="LIG-Kn-Xon"/>
+                <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="480" height="417"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+            <view key="contentView" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="0.0" width="480" height="417"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kiA-gV-AFl">
+                        <rect key="frame" x="200" y="13" width="81" height="32"/>
+                        <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VIu-yi-AX7">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="buttonPressed:" target="-2" id="d9k-0h-4br"/>
+                        </connections>
+                    </button>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LwN-Xs-XDU">
+                        <rect key="frame" x="20" y="61" width="440" height="336"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="440" id="ZfC-te-7Qc"/>
+                            <constraint firstAttribute="height" constant="336" id="hSa-Yp-cm4"/>
+                        </constraints>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="gIK-DT-Xzr"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="LwN-Xs-XDU" secondAttribute="trailing" constant="20" id="42e-jf-fq4"/>
+                    <constraint firstItem="kiA-gV-AFl" firstAttribute="centerX" secondItem="se5-gp-TjO" secondAttribute="centerX" id="MQU-RQ-6CY"/>
+                    <constraint firstItem="LwN-Xs-XDU" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="20" id="Wxb-Eh-pgi"/>
+                    <constraint firstItem="kiA-gV-AFl" firstAttribute="top" secondItem="LwN-Xs-XDU" secondAttribute="bottom" constant="20" id="YSj-zk-MCt"/>
+                    <constraint firstAttribute="bottom" secondItem="kiA-gV-AFl" secondAttribute="bottom" constant="20" id="YTl-QF-pqb"/>
+                    <constraint firstItem="LwN-Xs-XDU" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="20" id="v59-S8-Kyi"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
+            </connections>
+            <point key="canvasLocation" x="66" y="13"/>
+        </window>
+    </objects>
+</document>
