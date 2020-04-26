@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="16096" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16096"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="WindowController" customModule="Lesson_81" customModuleProvider="target">
+            <connections>
+                <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+            <view key="contentView" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                <autoresizingMask key="autoresizingMask"/>
+            </view>
+            <toolbar key="toolbar" implicitIdentifier="45975AAC-4C6E-4C08-A9DE-7B46A5E9703A" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="PaI-Z3-u4Q">
+                <allowedToolbarItems>
+                    <toolbarItem implicitItemIdentifier="F97BE6DD-AB74-4B0C-A34D-8824E1F1C53E" label="First" paletteLabel="First" tag="-1" id="1gA-v9-G3H">
+                        <size key="minSize" width="4" height="14"/>
+                        <size key="maxSize" width="4" height="14"/>
+                        <connections>
+                            <action selector="firstPressed:" target="-1" id="s5z-0o-uXi"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="AA23EA31-20C5-4D99-A6C4-BF31936F9E1D" label="Second" paletteLabel="Second" tag="-1" id="kjZ-ed-8hK">
+                        <size key="minSize" width="4" height="14"/>
+                        <size key="maxSize" width="4" height="14"/>
+                        <connections>
+                            <action selector="secondPressed:" target="-1" id="s1x-F0-CLG"/>
+                        </connections>
+                    </toolbarItem>
+                </allowedToolbarItems>
+                <defaultToolbarItems>
+                    <toolbarItem reference="1gA-v9-G3H"/>
+                    <toolbarItem reference="kjZ-ed-8hK"/>
+                </defaultToolbarItems>
+            </toolbar>
+            <connections>
+                <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
+            </connections>
+            <point key="canvasLocation" x="-87" y="150"/>
+        </window>
+    </objects>
+</document>
