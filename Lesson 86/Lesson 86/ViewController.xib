@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097.2"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ViewController" customModule="Lesson_86" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY" customClass="ImageDropView" customModule="Lesson_86" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="556" height="439"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="3Ow-Ya-BDy">
+                    <rect key="frame" x="0.0" y="0.0" width="556" height="439"/>
+                    <imageCell key="cell" alignment="left" imageScaling="proportionallyDown" id="QpZ-9s-NDz"/>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="3Ow-Ya-BDy" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="Il7-n5-akB"/>
+                <constraint firstItem="3Ow-Ya-BDy" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="eED-L8-Q9m"/>
+                <constraint firstAttribute="trailing" secondItem="3Ow-Ya-BDy" secondAttribute="trailing" id="vg2-lU-3G6"/>
+                <constraint firstAttribute="bottom" secondItem="3Ow-Ya-BDy" secondAttribute="bottom" id="xzd-Gu-7db"/>
+            </constraints>
+            <connections>
+                <outlet property="delegate" destination="-2" id="3qh-wO-9b8"/>
+                <outlet property="imageView" destination="3Ow-Ya-BDy" id="0Cq-T0-CaQ"/>
+            </connections>
+            <point key="canvasLocation" x="86" y="41"/>
+        </customView>
+    </objects>
+</document>
