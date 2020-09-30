@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17156" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17156"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ViewController" customModule="Lesson_89" customModuleProvider="target">
+            <connections>
+                <outlet property="entryField" destination="U5t-Mo-mJ6" id="sHP-YO-k5o"/>
+                <outlet property="statusLabel" destination="pl3-QD-MrB" id="BpP-Tv-OLc"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="374"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9WS-8P-QyN">
+                    <rect key="frame" x="360" y="141" width="106" height="32"/>
+                    <buttonCell key="cell" type="push" title="Read Entry" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wYG-yR-gez">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="readEntry:" target="-2" id="KGK-Gs-fUH"/>
+                    </connections>
+                </button>
+                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="U5t-Mo-mJ6">
+                    <rect key="frame" x="20" y="177" width="440" height="21"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="skC-mC-IAe">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pl3-QD-MrB">
+                    <rect key="frame" x="18" y="206" width="110" height="16"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Save a password:" id="Vvb-1H-YxN">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uE8-90-qeJ">
+                    <rect key="frame" x="14" y="141" width="108" height="32"/>
+                    <buttonCell key="cell" type="push" title="Store Entry" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="BID-bS-pyg">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="storeEntry:" target="-2" id="ycg-gx-Noh"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pl3-QD-MrB" secondAttribute="trailing" constant="20" symbolic="YES" id="9Fs-un-IxA"/>
+                <constraint firstItem="uE8-90-qeJ" firstAttribute="top" secondItem="U5t-Mo-mJ6" secondAttribute="bottom" constant="8" symbolic="YES" id="DgT-Bw-0qt"/>
+                <constraint firstItem="U5t-Mo-mJ6" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="Hm2-Oq-xOQ"/>
+                <constraint firstAttribute="trailing" secondItem="9WS-8P-QyN" secondAttribute="trailing" constant="20" symbolic="YES" id="Us2-3d-nxc"/>
+                <constraint firstItem="U5t-Mo-mJ6" firstAttribute="top" secondItem="pl3-QD-MrB" secondAttribute="bottom" constant="8" symbolic="YES" id="VyQ-A5-CuN"/>
+                <constraint firstItem="U5t-Mo-mJ6" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" symbolic="YES" id="aIs-4Z-M0X"/>
+                <constraint firstAttribute="trailing" secondItem="U5t-Mo-mJ6" secondAttribute="trailing" constant="20" symbolic="YES" id="asG-Sc-OlB"/>
+                <constraint firstItem="pl3-QD-MrB" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" symbolic="YES" id="cor-A2-5Zo"/>
+                <constraint firstItem="uE8-90-qeJ" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" symbolic="YES" id="iwq-y0-mP2"/>
+                <constraint firstItem="9WS-8P-QyN" firstAttribute="top" secondItem="U5t-Mo-mJ6" secondAttribute="bottom" constant="8" symbolic="YES" id="sdj-nY-AzA"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="109"/>
+        </customView>
+    </objects>
+</document>
