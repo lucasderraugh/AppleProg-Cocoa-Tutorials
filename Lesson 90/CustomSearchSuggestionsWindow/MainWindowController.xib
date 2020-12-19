@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17156" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17156"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="MainWindowController" customModule="CustomSearchSuggestionsWindow" customModuleProvider="target">
+            <connections>
+                <outlet property="resultsLabel" destination="BHi-p1-QbK" id="gIH-up-d7r"/>
+                <outlet property="searchField" destination="y4p-zU-Sds" id="W3G-2I-76n"/>
+                <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="581" height="496"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+            <view key="contentView" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="0.0" width="581" height="496"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BHi-p1-QbK">
+                        <rect key="frame" x="216" y="229" width="149" height="39"/>
+                        <textFieldCell key="cell" lineBreakMode="clipping" title="&lt;Results&gt;" id="EOB-JD-VN1">
+                            <font key="font" metaFont="system" size="33"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <searchField wantsLayer="YES" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4p-zU-Sds">
+                        <rect key="frame" x="20" y="454" width="541" height="22"/>
+                        <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="soR-9B-ToI">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </searchFieldCell>
+                        <connections>
+                            <outlet property="delegate" destination="-2" id="yNp-hP-cib"/>
+                        </connections>
+                    </searchField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="BHi-p1-QbK" firstAttribute="centerX" secondItem="se5-gp-TjO" secondAttribute="centerX" id="6Sg-CT-vIh"/>
+                    <constraint firstItem="y4p-zU-Sds" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="20" symbolic="YES" id="6XZ-La-K2m"/>
+                    <constraint firstItem="BHi-p1-QbK" firstAttribute="centerY" secondItem="se5-gp-TjO" secondAttribute="centerY" id="ivy-E3-AAq"/>
+                    <constraint firstAttribute="trailing" secondItem="y4p-zU-Sds" secondAttribute="trailing" constant="20" symbolic="YES" id="mWw-ly-fCz"/>
+                    <constraint firstItem="y4p-zU-Sds" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="20" symbolic="YES" id="unT-fv-KbP"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
+            </connections>
+            <point key="canvasLocation" x="-86.5" y="260"/>
+        </window>
+    </objects>
+</document>
