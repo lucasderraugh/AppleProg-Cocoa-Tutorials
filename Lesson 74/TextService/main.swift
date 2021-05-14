@@ -8,8 +8,8 @@
 
 import Foundation
 
-//let delegate = TextServiceDelegate()
+let delegate = TextServiceDelegate()
 let listener = NSXPCListener.service()
-listener.delegate = TextServiceDelegate()
+listener.delegate = delegate
 listener.resume()
 print("Jonda")
